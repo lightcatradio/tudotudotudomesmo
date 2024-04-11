@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        font-size: 48px;
+      }
+      a {
+        text-align: center;
+        font-size: 18px;
+      }
+      .numeros {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .numeroCaixa {
+        background-color: hsl(255, 100%, 70%);
+        width: 225px;
+        height: 250px;
+        border: 2px solid black;
+        border-radius: 20px;
+      }
+      .numeroCaixa p {
+        margin: auto;
+        background-color: hsl(255, 100%, 86%);
+        width: 90px;
+        height: 90px;
+        border: 2px solid black;
+        border-radius: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .mais,
+      .igual,
+      .resultado {
+        width: 250px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #sinalMais {
+        font-size: 120px;
+        font-weight: bold;
+      }
+      #sinalIgual,
+      #resultado {
+        font-size: 80px;
+        font-weight: bold;
+      }
+      #sinalIgual {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: hsl(255, 100%, 86%);
+      }
+      .numero {
+        margin: 30px 0 10px 0;
+        font-size: 5em;
+        text-align: center;
+      }
+      .botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .botao {
+        height: 30px;
+        width: 140px;
+        border-radius: 40px;
+        font-size: 1.5em;
+        background-color: hsl(255, 100%, 86%);
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+      .botao:hover {
+        background-color: hsl(255, 100%, 96%);
+        transform: translateY(-2.5px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <a href="index.html"><p>Home</p></a>
+
+    <div class="numeros">
+      <div class="numeroCaixa">
+        <p class="numero" id="numero1">0</p>
+        <div class="botoes">
+          <button id="aumentaBtn1" class="botao">Aumentar</button>
+          <button id="resetaBtn1" class="botao">Resetar</button>
+          <button id="diminuiBtn1" class="botao">Diminuir</button>
+        </div>
+      </div>
+      <div class="mais">
+        <p id="sinalMais">+</p>
+      </div>
+      <div class="numeroCaixa">
+        <p class="numero" id="numero2">0</p>
+        <div class="botoes">
+          <button id="aumentaBtn2" class="botao">Aumentar</button>
+          <button id="resetaBtn2" class="botao">Resetar</button>
+          <button id="diminuiBtn2" class="botao">Diminuir</button>
+        </div>
+      </div>
+      <div class="igual">
+        <button class="botao" id="sinalIgual">=</button>
+      </div>
+      <div class="resultado">
+        <p id="resultado">...</p>
+      </div>
+    </div>
+    <script>
+      const aumentaBtn1 = document.getElementById("aumentaBtn1");
+      const resetaBtn1 = document.getElementById("resetaBtn1");
+      const diminuiBtn1 = document.getElementById("diminuiBtn1");
+      const numero1 = document.getElementById("numero1");
+      const aumentaBtn2 = document.getElementById("aumentaBtn2");
+      const resetaBtn2 = document.getElementById("resetaBtn2");
+      const diminuiBtn2 = document.getElementById("diminuiBtn2");
+      const numero2 = document.getElementById("numero2");
+      const somaBtn = document.getElementById("sinalIgual");
+      const resultado = document.getElementById("resultado");
+      let contagem1 = 0;
+      let contagem2 = 0;
+
+      aumentaBtn1.onclick = function () {
+        contagem1++;
+        numero1.textContent = contagem1;
+      };
+
+      resetaBtn1.onclick = function () {
+        contagem1 = 0;
+        numero1.textContent = contagem1;
+      };
+
+      diminuiBtn1.onclick = function () {
+        contagem1--;
+        numero1.textContent = contagem1;
+      };
+
+      aumentaBtn2.onclick = function () {
+        contagem2++;
+        numero2.textContent = contagem2;
+      };
+
+      resetaBtn2.onclick = function () {
+        contagem2 = 0;
+        numero2.textContent = contagem2;
+      };
+
+      diminuiBtn2.onclick = function () {
+        contagem2--;
+        numero2.textContent = contagem2;
+      };
+
+      somaBtn.onclick = function () {
+        let soma = contagem1 + contagem2;
+        resultado.textContent = soma;
+      };
+    </script>
+  </body>
+</html>

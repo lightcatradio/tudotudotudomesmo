@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+      header {
+        width: 100%;
+        min-height: 15vh;
+        background-color: hsl(0, 0%, 50%);
+        border-bottom: 5px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      main {
+        height: 85vh;
+        width: 100vw;
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 50px;
+      }
+      .conteudo {
+        background-color: hsl(0, 0%, 90%);
+        height: 500px;
+        width: 400px;
+        border: 5px solid black;
+        border-radius: 45px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .conteudo h2 {
+        padding: 7.5% 0 5% 0;
+        font-size: 30px;
+        border-bottom: 2px solid black;
+        background-color: hsl(0, 0%, 80%);
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+      }
+      .links a {
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+        height: 137px;
+        padding-top: 50px;
+        font-size: 25px;
+        border-bottom: 2px solid black;
+        background-color: hsl(0, 0%, 90%);
+        transition: all 0.2s ease;
+      }
+      .links a:hover {
+        background-color: hsl(0, 0%, 95%);
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Meu Website</h1>
+    </header>
+    <main>
+      <div class="conteudo">
+        <h2>Minhas páginas</h2>
+        <div class="links">
+          <a href="acertarONumero.html">Acertar o número!</a>
+          <a href="calculadora.html">Calculadora!</a>
+          <a href="rolarODado.html">Rolar o dado!</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

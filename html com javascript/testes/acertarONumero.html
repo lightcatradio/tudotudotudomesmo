@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerte o Número!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: hsl(0, 0%, 95%);
+      }
+      h1 {
+        text-align: center;
+        font-size: 48px;
+      }
+      h1 + p {
+        text-align: center;
+        font-size: 24px;
+      }
+      .top {
+        background-color: hsl(0, 0%, 75%);
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid black;
+      }
+      .topTexto {
+        text-align: center;
+      }
+      .topTexto p {
+        margin-top: 5px;
+      }
+      .topTexto a {
+        margin-top: 5px;
+      }
+      .conteudo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 100px;
+        background-color: hsl(0, 0%, 85%);
+        border: 3px solid black;
+        border-radius: 25px;
+        margin: auto;
+        margin-top: 5%;
+      }
+      .conteudo p {
+        font-size: 20px;
+        margin-right: 6%;
+      }
+      .conteudo input {
+        width: 40%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 15px;
+      }
+      .conteudo button:not(.enviar) {
+        width: 60px;
+        height: 40px;
+        margin: 0 1% 0 1%;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-size: 20px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+      }
+      .conteudo button.enviar {
+        width: 75px;
+        height: 37.25px;
+        margin-left: 3%;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-size: 20px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+      }
+      .conteudo button:hover {
+        transform: translateY(-2px);
+        background-color: hsl(0, 0%, 100%);
+      }
+      .conteudo button:active {
+        transform: scale(1.15);
+      }
+      .janela {
+        background-color: hsl(0, 0%, 100%);
+        width: 75%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .janelaTexto {
+        text-align: center;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div class="topTexto">
+          <h1>Acerte o número!</h1>
+          <p>
+            Nesse jogo, você deve tentar adivinhar o número em que meu amigo
+            Javinéio Scriptildo está pensando<br />(Dica: Ele só sabe contar do
+            1 até o 100).<br />Pronto? Então vamos lá!
+          </p>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+      <div class="conteudos">
+        <div class="conteudo">
+          <button id="mais">+</button>
+          <input
+            type="number"
+            id="numeroUsu"
+            type="text"
+            placeholder="Sua tentativa aqui"
+          />
+          <button id="menos">-</button>
+          <button class="enviar" id="enviar">Enviar</button>
+        </div>
+        <div class="conteudo">
+          <div class="janela">
+            <div class="janelaTexto">
+              <p id="resposta">...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const numeroUsuInp = document.getElementById("numeroUsu");
+      const enviarBtn = document.getElementById("enviar");
+      const respostaTxt = document.getElementById("resposta");
+      const maisBtn = document.getElementById("mais");
+      const menosBtn = document.getElementById("menos");
+
+      let numeroMaq = Math.floor(Math.random() * 100) + 1;
+      let cont;
+
+      maisBtn.onclick = function () {
+        cont = Number(numeroUsuInp.value);
+        cont++;
+        numeroUsuInp.value = cont;
+      };
+
+      menosBtn.onclick = function () {
+        cont = Number(numeroUsuInp.value);
+        cont--;
+        numeroUsuInp.value = cont;
+      };
+
+      enviarBtn.onclick = function () {
+        let numeroUsu = Number(numeroUsuInp.value);
+
+        if (isNaN(numeroUsu) || 0 > numeroUsu || 100 < numeroUsu) {
+          respostaTxt.textContent = `Apenas números válidos por favor!`;
+        } else if (numeroUsu > numeroMaq) {
+          respostaTxt.textContent = `Menos do que isso...`;
+        } else if (numeroUsu < numeroMaq) {
+          respostaTxt.textContent = `Mais do que isso...`;
+        } else {
+          respostaTxt.textContent = `Você acertou! O número era ${numeroMaq}`;
+        }
+      };
+    </script>
+  </body>
+</html>

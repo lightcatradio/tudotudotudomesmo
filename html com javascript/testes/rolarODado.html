@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolar o Dado!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .main {
+        height: 100vh;
+        width: 100vh;
+      }
+      .conteudos {
+        background-color: hsl(0, 0%, 95%);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .caixa1 {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+      }
+      .conteudo {
+        width: 400px;
+        height: 300px;
+        border: 4px solid black;
+        border-radius: 50px;
+        background-color: hsl(0, 0%, 100%);
+      }
+      .outros {
+        height: 150px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      .outros a {
+        display: inline-block;
+        width: 500px;
+        height: fit-content;
+        font-size: 1.5rem;
+        color: inherit;
+        transition: all 0.5s ease;
+      }
+      .outros a.baixo {
+        margin-bottom: 20px;
+      }
+      .outros a:hover {
+        transform: scale(1.05);
+      }
+      .outros p {
+        font-size: 1.75rem;
+      }
+      .caixaDados {
+        width: 600px;
+        height: 500px;
+      }
+      .textos {
+        text-align: center;
+        margin: 20px;
+        height: 260px;
+      }
+      .textos h1 {
+        font-size: 2.5rem;
+      }
+      .textos p {
+        margin-top: 10%;
+        font-size: 1.5rem;
+      }
+      .textos input {
+        margin-top: 2%;
+        height: 50px;
+        width: 150px;
+        border: 3px solid black;
+        border-radius: 15px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: inherit;
+      }
+      .textos button {
+        margin-top: 7.5%;
+        height: 50px;
+        width: 100px;
+        border: 3px solid black;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: hsl(0, 100%, 40%);
+        color: hsl(0, 0%, 100%);
+        transition: transform 0.5s ease;
+      }
+      .textos button:hover {
+        background-color: hsl(0, 100%, 50%);
+        transform: translateY(-5px);
+      }
+      .textos button:active {
+        background-color: hsl(0, 0%, 50%);
+      }
+      #textoResultado {
+        font-size: 2.25rem;
+        text-align: center;
+        margin: 2%;
+        font-weight: bold;
+      }
+      #dadosResultado {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="conteudos">
+        <div class="caixa1">
+          <div class="conteudo">
+            <div class="textos">
+              <h1>Rolar o Dado!</h1>
+              <p>Número de dados:</p>
+              <input
+                id="numDados"
+                type="number"
+                min="1"
+                max="15"
+                value="1"
+              /><br />
+              <button onclick="rolar()">Rolar</button>
+            </div>
+          </div>
+          <div class="conteudo outros">
+            <p>Outras páginas:</p>
+            <a class="baixo" href="index.html">Home</a>
+          </div>
+        </div>
+        <div class="caixaDados conteudo">
+          <div id="textoResultado"></div>
+          <div id="dadosResultado"></div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function rolar() {
+        const numDados = document.getElementById("numDados").value;
+        const dadosResultado = document.getElementById("dadosResultado");
+        const textoResultado = document.getElementById("textoResultado");
+        const valores = [];
+        const imagens = [];
+
+        for (let isb = 0; isb < numDados; isb++) {
+          const valor = Math.floor(Math.random() * 6) + 1;
+          console.log(valor);
+          valores.push(valor);
+          imagens.push(`<img src="imagens/${valor}.png" alt="${valor}" />`);
+          console.log(imagens);
+        }
+
+        dadosResultado.innerHTML = imagens.join("");
+        textoResultado.textContent = `Valores: ${valores.join(", ")}`;
+      }
+    </script>
+  </body>
+</html>
