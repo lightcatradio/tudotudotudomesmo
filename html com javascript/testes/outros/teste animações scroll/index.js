@@ -9,5 +9,7 @@ const observador = new IntersectionObserver((entries) => {
   });
 });
 
-const escondidinhos = document.querySelectorAll(".escondidinho");
-escondidinhos.forEach((el) => observador.observe(el));
+const escondidinhosL = document.querySelectorAll(".escondidinho-esquerda");
+const escondidinhosD = document.querySelectorAll(".escondidinho-direita");
+escondidinhosL.forEach((el) => observador.observe(el));
+escondidinhosD.forEach((el) => observador.observe(el));
