@@ -59,3 +59,39 @@ div p {
   max-width: 50rem;
   text-align: center;
 }
+
+.textos-abaixo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.textos-abaixo h2 {
+  font-size: 2em;
+  display: block;
+  width: 100vw;
+  text-align: center;
+}
+
+.escondidinho__texto {
+  width: 17.5rem;
+  background-color: hsl(0, 0%, 10%);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+#texto2 {
+  transition-delay: 200ms;
+}
+
+#texto3 {
+  transition-delay: 400ms;
+}
+
+#texto4 {
+  transition-delay: 600ms;
+}
