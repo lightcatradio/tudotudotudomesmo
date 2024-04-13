@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cronômetro</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: hsl(222, 47%, 11%);
+        color: hsl(210, 40%, 96%);
+      }
+
+      .btn {
+        width: 200px;
+        height: 90px;
+        color: inherit;
+        font-size: 200%;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px;
+        transition: transform 0.2s ease;
+      }
+
+      #comeca {
+        background-color: #65a30d;
+      }
+      #comeca:active {
+        background-color: hsl(85, 85%, 45%);
+      }
+      #para {
+        background-color: #dc2626;
+      }
+      #para:active {
+        background-color: hsl(0, 72%, 61%);
+      }
+      #reseta {
+        background-color: #2563eb;
+      }
+      #reseta:active {
+        background-color: hsl(221, 83%, 63%);
+      }
+      .btn:hover {
+        transform: translateY(-5px);
+      }
+
+      .tela {
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+        margin-top: 50px;
+        border-radius: 30px;
+        width: 50vw;
+        height: 40vh;
+        font-size: 750%;
+        font-weight: bold;
+        background-color: hsl(217, 33%, 17%);
+      }
+      .milissegundos,
+      .milissegundos-escondido {
+        display: inline;
+        position: relative;
+        top: 30px;
+        right: 30px;
+        font-size: 35%;
+      }
+      .milissegundos-escondido {
+        opacity: 0;
+      }
+      .tela,
+      .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+
+      h1 {
+        margin-top: 7.5vh;
+        font-size: 5rem;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Cronômetro</h1>
+      <div class="telaContainer">
+        <div class="tela">
+          <section class="milissegundos-escondido">:00</section>
+          <p id="tela-texto">00:00:00</p>
+          <section class="milissegundos">:00</section>
+        </div>
+      </div>
+      <div class="botoes">
+        <button class="btn" id="comeca" onclick="comeca()">Começar</button>
+        <button class="btn" id="para" onclick="para()">Parar</button>
+        <button class="btn" id="reseta" onclick="reseta()">Resetar</button>
+      </div>
+    </main>
+    <script defer>
+      const telaGeral = document.querySelector(".tela #tela-texto");
+      const telaMilissegundos = document.querySelector(".milissegundos");
+      let timer = null;
+      let tempoInicio = 0;
+      let tempoPassado = 0;
+      let ligado = false;
+
+      function comeca() {
+        if (!ligado) {
+          tempoInicio = Date.now() - tempoPassado;
+          timer = setInterval(atualizar, 10);
+          ligado = true;
+        }
+      }
+
+      function para() {
+        clearInterval(timer);
+        ligado = false;
+      }
+
+      function reseta() {
+        clearInterval(timer);
+        ligado = false;
+        tempoInicio = 0;
+        tempoPassado = 0;
+        telaGeral.textContent = "00:00:00";
+        telaMilissegundos.textContent = ":00";
+      }
+
+      function atualizar() {
+        const tempoAgora = Date.now();
+        tempoPassado = tempoAgora - tempoInicio;
+
+        let horas = Math.floor(tempoPassado / (1000 * 60 * 60));
+        let minutos = Math.floor((tempoPassado / (1000 * 60)) % 60);
+        let segundos = Math.floor((tempoPassado / 1000) % 60);
+        let milissegundos = Math.floor((tempoPassado % 1000) / 10);
+
+        horas = String(horas).padStart(2, "0");
+        minutos = String(minutos).padStart(2, "0");
+        segundos = String(segundos).padStart(2, "0");
+        milissegundos = String(milissegundos).padStart(2, "0");
+
+        telaGeral.textContent = `${horas}:${minutos}:${segundos}`;
+        telaMilissegundos.textContent = `:${milissegundos}`;
+      }
+    </script>
+  </body>
+</html>
