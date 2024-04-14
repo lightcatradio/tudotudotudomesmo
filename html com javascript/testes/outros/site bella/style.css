@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "General Sans", sans-serif;
+}
+
+/* ---------- Variaveis ---------- */
+
+:root {
+  --cor-rose: #e11d48;
+  --cor-rose-hover: #f43f5e;
+  --cor-rose-active: #fb7185;
+  --cor-vermelho: #dc2626;
+  --cor-verde: #65a30d;
+  --cor-amarelo: #facc15;
+  --cor-azul: #2563eb;
+  --cor-indigo: #4f46e5;
+  --cor-roxo: #9333ea;
+  --cor-stale900: #0f172a;
+  --cor-stale800: #1e293b;
+  --cor-stale700: #334155;
+  --cor-stale600: #475569;
+  --cor-stale500: #64748b;
+  --cor-escuro: #0a0a0a;
+  --cor-claro: #f5f5f5;
+
+  --tam-micro: 0.5rem;
+  --tam-menor: 0.75rem;
+  --tam-pequeno: 0.875rem;
+  --tam-base: 1rem;
+  --tam-grande: 1.125rem;
+  --tam-maior: 1.25rem;
+  --tam-xl: 1.5rem;
+  --tam-2xl: 2.25rem;
+  --tam-3xl: 3rem;
+  --tam-4xl: 4.5rem;
+  --tam-5xl: 6rem;
+  --tam-6xl: 8rem;
+  --tam-7xl: 10rem;
+}
+
+/* ---------- Classes de utilidade ---------- */
+
+.btn {
+  width: var(--tam-7xl);
+  height: var(--tam-4xl);
+  border-radius: 15px;
+  font-size: 1.5em;
+  background-color: var(--cor-rose);
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.espaco-P {
+  margin-top: 2.25rem;
+}
+
+.espaco-G {
+  margin-top: 4.5rem;
+}
+
+.flex-center-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Estilos Gerais ---------- */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-stale900);
+  color: var(--cor-claro);
+  overflow: hidden;
+}
+
+.aceita-texto {
+  font-size: var(--tam-4xl);
+  font-weight: 500;
+  text-align: center;
+}
+
+.aceita-botoes {
+  gap: 1rem;
+}
+
+#sim {
+  position: relative;
+  top: 100px;
+}
+
+#nao {
+  position: absolute;
+}
+
+/* ---------- Pseudo-coisas ---------- */
+
+.btn:not(#nao):hover {
+  transform: translateY(-5px);
+  background-color: var(--cor-rose-hover);
+}
+
+.btn:not(#nao):active {
+  background-color: var(--cor-rose-active);
+}
+
+/* ---------- Midia Querys ---------- */
+
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}

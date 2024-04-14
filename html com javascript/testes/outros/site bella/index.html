@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webbella</title>
+    <link rel="shortcut icon" type="image/jpg" href="imagens/coracaoICO.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container flex-center-column">
+      <h2 class="aceita-texto">Quer namorar comigo?</h2>
+      <div class="aceita-botoes flex-center-row espaco-P">
+        <button class="btn" id="sim" onclick="mensagemSIM()">Sim</button>
+        <button
+          class="btn"
+          id="nao"
+          onmouseenter="moverBotao()"
+          onclick="mensagemNAO()"
+        >
+          Não
+        </button>
+      </div>
+    </div>
+    <script defer src="index.js"></script>
+  </body>
+</html>
