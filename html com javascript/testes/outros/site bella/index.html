@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbella</title>
+    <title>Relógio Bellipe</title>
     <link rel="shortcut icon" type="image/jpg" href="imagens/coracaoICO.ico" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -12,20 +12,28 @@
     />
   </head>
   <body>
-    <div class="container flex-center-column">
-      <h2 class="aceita-texto">Quer namorar comigo?</h2>
-      <div class="aceita-botoes flex-center-row espaco-P">
-        <button class="btn" id="sim" onclick="mensagemSIM()">Sim</button>
-        <button
-          class="btn"
-          id="nao"
-          onmouseenter="moverBotao()"
-          onclick="mensagemNAO()"
-        >
-          Não
-        </button>
+    <main>
+      <img id="borda-esquerda" src="imagens/borda-esquerda.png" alt="borda-esquerda">
+      <img id="borda-direita" src="imagens/borda-direita.png" alt="borda-direita">
+      <div class="container flex-center-column">
+        <div class="titulo espaco-P">
+          <h2>
+            Quer saber há quanto tempo <br>
+            <span class="dentro-h2-texto">❤️ Felipe e Isabella ❤️</span>
+            <br />namoram???
+          </h2>
+        </div>
+        <div class="espaco-P">
+          <h3>Seus problemas acabaram! O casal está junto há...</h3>
+        </div>
+        <div class="tempos espaco-G">
+          <h1 id="tempo">00:00:00:00:00:00:00</h1>
+          <h2 class="tempos-lista">Anos Meses Semanas Dias Horas Minutos Segundos</h2>
+        </div>
+        <div class="espaco-G">
+          <h4 class="texto-abaixo">(Data do pedido: 18/03/2024)</h4>
+        </div>
       </div>
-    </div>
     <script defer src="index.js"></script>
   </body>
 </html>
