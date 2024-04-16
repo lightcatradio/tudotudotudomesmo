@@ -96,3 +96,66 @@ h3 {
 #borda-direita {
   right: 0;
 }
+
+.tempos-mobile {
+  display: none;
+}
+
+img {
+  display: none;
+}
+
+/* ---------- Media Querys ---------- */
+
+@media (min-width: 1270px) {
+  img {
+    display: block;
+  }
+}
+
+@media (max-width: 445px) {
+  body {
+    overflow: hidden;
+  }
+  .container {
+    max-width: 420px;
+  }
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .dentro-h2-texto {
+    font-size: 150%;
+  }
+
+  .tempos-lista-mobile {
+    font-size: 50%;
+    letter-spacing: normal;
+    word-spacing: 10px;
+  }
+
+  span {
+    margin: 0;
+  }
+
+  .tempos-mobile {
+    display: block;
+  }
+
+  .tempos-desktop {
+    display: none;
+  }
+
+  .texto-abaixo {
+    margin-bottom: 30px;
+  }
+}

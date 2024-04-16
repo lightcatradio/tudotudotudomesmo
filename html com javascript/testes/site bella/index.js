@@ -39,13 +39,41 @@ function formatarTempo(tempo) {
   )}:${doisDigitos(tempo.segundos)}`;
 }
 
+function formatarTempoMobile(tempo) {
+  const doisDigitos = (valor) => String(valor).padStart(2, "0");
+  const anosEMeses = `${doisDigitos(tempo.anos)}:${doisDigitos(tempo.meses)}`;
+  const semanasEDias = `${doisDigitos(tempo.semanas)}:${doisDigitos(
+    tempo.dias
+  )}`;
+  const horasEMinutos = `${doisDigitos(tempo.horas)}:${doisDigitos(
+    tempo.minutos
+  )}`;
+  const segundosESegundos = `${doisDigitos(tempo.segundos)}`;
+
+  return {
+    anosEMeses,
+    semanasEDias,
+    horasEMinutos,
+    segundosESegundos,
+  };
+}
+
 function atualizarTempo() {
   const tempoElemento = document.getElementById("tempo");
+  const elementoAnosEMeses = document.getElementById("anos-meses");
+  const elementoSemanasEDias = document.getElementById("semanas-dias");
+  const elementoHorasEMinutos = document.getElementById("horas-minutos");
+  const elementoSegundos = document.getElementById("segundos");
   const dataInicial = new Date("2024-03-18T00:00:00");
   const dataAtual = new Date();
   const diferencaDeTempo = calcularDiferencaDeTempo(dataInicial, dataAtual);
   const tempoFormatado = formatarTempo(diferencaDeTempo);
+  const tempoFormatadoMobile = formatarTempoMobile(diferencaDeTempo);
   tempoElemento.textContent = tempoFormatado;
+  elementoAnosEMeses.textContent = tempoFormatadoMobile.anosEMeses;
+  elementoSemanasEDias.textContent = tempoFormatadoMobile.semanasEDias;
+  elementoHorasEMinutos.textContent = tempoFormatadoMobile.horasEMinutos;
+  elementoSegundos.textContent = tempoFormatadoMobile.segundosESegundos;
 }
 
 setInterval(atualizarTempo, 1000);
