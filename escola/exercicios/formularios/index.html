@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            /* font-family: Arial, Helvetica, sans-serif; */
+            box-sizing: border-box;
+        }
+        div{
+            /* border: 1px solid red; */
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        h2.t2{
+            text-align: center;
+        }
+        .container{
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10rem;
+        }
+        .formulario{
+            display: flex;
+            gap: 10px;
+        }
+        .labels{
+            line-height: 21px;
+        }
+        .labels-objetivo{
+            display: flex;
+            
+        }
+        .objetivos{
+            display: flex;
+        }
+        .radio {
+            display: inline-block;
+            width: 15px;
+        }
+        .labels-objetivos{
+            display: inline-block;
+        }
+        .caixa-formulario{
+            width: 400px;
+            padding: 15px 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .caixa-formulario label{
+            font-weight: bold;
+        }
+        .caixa-formulario input{
+            margin-bottom: 20px;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .formularios2{
+            display: flex;
+            justify-content: center;
+        }
+        #mensagem{
+            height: 120px;
+        }
+        #enviar2{
+            width: 100px;
+            height: 40px;
+            background-color: rgb(0, 179, 0);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        textarea{
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            max-height: 180px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Formularios uhuu !!</h1>
+        <div class="container">
+            <div class="formularios">
+                <h2>Formulário de Exercício</h2>
+                <form action="">
+                    <div class="formulario">
+                        <div class="labels">
+                            <label for="nome">Nome:</label><br>
+                            <label for="idade">Idade:</label><br>
+                            <label for="altura">Altura:</label><br>
+                            <label for="peso">Peso:</label>
+                            <br>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" id="nome"><br>
+                            <input type="text" id="idade"><br>
+                            <input type="text" id="altura"><br>
+                            <input type="text" id="peso"><br>
+                        </div>
+                    </div>
+                    <label for="exercicio">Tipo de Exercício:</label>
+                    <select name="exercicio" id="exercicio">
+                        <option value="opcao1">Cardio</option>
+                        <option value="opcao2">Não-cardio</option>
+                        <option value="opcao3">Cardio 2</option>
+                    </select><br>
+                    <div class="objetivos">
+                        <div class="texto-objetivo">
+                            <label for="objetivo">Objetivo:</label>
+                        </div>
+                        <div class="labels-objetivo">
+                            <input class="radio" name="btn" type="radio" id="emagrecimento">
+                            <label class="labels-objetivos" for="emagrecimento">Emagrecimento</label>
+                            <input class="radio" name="btn" type="radio" id="tonificacao">
+                            <label class="labels-objetivos" name="btn" for="tonificacao">Tonificação</label>
+                            <input class="radio" name="btn" type="radio" id="massa">
+                            <label class="labels-objetivos" for="massa">Ganho de massa muscular</label><br>
+                        </div>
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </div>
+            <div class="formulario2-container">
+                <h2 class="t2">Formulário de Contato</h2>
+                <div class="formularios2">
+                    <form action="">
+                        <div class="caixa-formulario">
+                            <label for="nome2">Nome:</label><br>
+                            <input id="nome2" type="text"><br>
+                            <label for="email">E-mail:</label><br>
+                            <input id="email" type="text"><br>
+                            <label for="telefone">Telefone:</label><br>
+                            <input id="telefone" type="text"><br>
+                            <label for="mensagem">Mensagem:</label><br>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                            <button id="enviar2">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
