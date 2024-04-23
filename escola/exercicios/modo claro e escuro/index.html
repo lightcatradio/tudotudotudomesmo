@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro/Escuro</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
+        }
+
+        /* Estilo para o modo claro */
+        body.light-mode {
+            background-color: #ffffff; /* Cor de fundo para o modo claro */
+            color: #333333; /* Cor do texto para o modo claro */
+        }
+
+        /* Estilo para o modo escuro */
+        body.dark-mode {
+            background-color: #333333; /* Cor de fundo para o modo escuro */
+            color: #ffffff; /* Cor do texto para o modo escuro */
+        }
+
+        /* Estilo para os botões */
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body class="light-mode">
+
+<!-- Botões para alternar entre os modos claro e escuro -->
+<button onclick="toggleMode('light')">Modo Claro</button>
+<button onclick="toggleMode('dark')">Modo Escuro</button>
+
+<script>
+    // Função para alternar entre os modos claro e escuro
+    function toggleMode(mode) {
+        if (mode === 'light') {
+            document.body.classList.remove('dark-mode'); // Remove a classe 'dark-mode'
+            document.body.classList.add('light-mode'); // Adiciona a classe 'light-mode'
+        } else if (mode === 'dark') {
+            document.body.classList.remove('light-mode'); // Remove a classe 'light-mode'
+            document.body.classList.add('dark-mode'); // Adiciona a classe 'dark-mode'
+        }
+    }
+</script>
+
+</body>
+</html>
