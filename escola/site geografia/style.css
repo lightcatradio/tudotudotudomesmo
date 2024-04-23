@@ -17,7 +17,7 @@
   padding-right: 0.5rem;
   /* border: 1px solid red; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .botao,
