@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste pop-up</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="botao-fora">
+        <button onclick="abrir()">Abrir</button>
+      </div>
+      <div id="pop-up" class="pop-up">
+        <div class="pop-up__texto">
+          <h2>Olá, mundo!</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
+            magnam distinctio hic quibusdam, ad ut harum ullam? Recusandae velit
+            perspiciatis nam. Aperiam blanditiis ratione exercitationem illum
+            pariatur aut recusandae iusto.
+          </p>
+        </div>
+        <div class="botao-dentro">
+          <button onclick="fechar()">Fechar</button>
+        </div>
+      </div>
+    </main>
+    <script defer src="index.js"></script>
+  </body>
+</html>
