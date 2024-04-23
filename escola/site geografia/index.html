@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geografia | Biomas</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Olá, bem vindo!</h1>
+      <br />
+      <h2>Vamos conhecer os biomas brasileiros?</h2>
+    </header>
+    <main>
+      <h2>
+        Aqui estão os seis principais biomas presentes no território brasileiro:
+      </h2>
+      <div class="container espaco-G">
+        <div class="bioma">
+          <div class="bioma__imagem">
+            <img class="imagem" src="imagens/amazonia.jpg" alt="amazonia" />
+          </div>
+          <div class="bioma__titulo">Amazônia</div>
+          <div class="bioma__texto">
+            A maior floresta tropical do mundo, abriga uma biodiversidade
+            incomparável, com uma variedade impressionante de plantas, animais e
+            ecossistemas. É crucial para a regulação climática global e enfrenta
+            desafios como o desmatamento e a degradação ambiental.
+          </div>
+          <div class="bioma__botao">
+            <button onclick="abreAmazonia()" class="botao">Ver mais</button>
+          </div>
+        </div>
+        <div class="bioma">
+          <div class="bioma__imagem">
+            <img class="imagem" src="imagens/caatinga.jpg" alt="caatinga" />
+          </div>
+          <div class="bioma__titulo">Caatinga</div>
+          <div class="bioma__texto">
+            O bioma mais árido do Brasil, com uma vegetação adaptada à escassez
+            de água, incluindo plantas xerófitas e cactos. Apesar das condições
+            adversas, possui uma biodiversidade única, mas está sujeito à
+            desertificação e degradação devido às atividades humanas.
+          </div>
+          <div class="bioma__botao">
+            <button onclick="abreCaatinga()" class="botao">Ver mais</button>
+          </div>
+        </div>
+        <div class="bioma">
+          <div class="bioma__imagem">
+            <img class="imagem" src="imagens/cerrado.jpg" alt="cerrado" />
+          </div>
+          <div class="bioma__titulo">Cerrado</div>
+          <div class="bioma__texto">
+            Conhecido como a savana brasileira, é caracterizado por uma
+            vegetação diversificada, com árvores baixas, arbustos e gramíneas.
+            Abriga uma rica diversidade de flora e fauna, mas enfrenta ameaças
+            significativas devido à expansão agrícola e pecuária.
+          </div>
+          <div class="bioma__botao">
+            <button onclick="abreCerrado()" class="botao">Ver mais</button>
+          </div>
+        </div>
+      </div>
+      <div class="container espaco-G">
+        <div class="bioma">
+          <div class="bioma__imagem">
+            <img class="imagem" src="imagens/mata.jpg" alt="mata atlantica" />
+          </div>
+          <div class="bioma__titulo">Mata Atlântica</div>
+          <div class="bioma__texto">
+            Originalmente estendendo-se ao longo da costa brasileira, hoje é um
+            dos biomas mais ameaçados, com apenas uma fração de sua cobertura
+            original restante. Abriga uma grande diversidade de espécies
+            vegetais e animais, mas enfrenta pressões devido à urbanização,
+            agricultura e desmatamento.
+          </div>
+          <div class="bioma__botao">
+            <button onclick="abreMata()" class="botao">Ver mais</button>
+          </div>
+        </div>
+        <div class="bioma">
+          <div class="bioma__imagem">
+            <img class="imagem" src="imagens/pampa.jpg" alt="pampa" />
+          </div>
+          <div class="bioma__titulo">Pampa</div>
+          <div class="bioma__texto">
+            Bioma de campos abertos no sul do Brasil, caracterizado por
+            vegetação de gramíneas, matas de galeria e bosques. Abriga
+            diversidade de flora e fauna, mas enfrenta ameaças devido à
+            agricultura e pecuária intensiva, resultando em perda de habitat e
+            fragmentação do ecossistema.
+          </div>
+          <div class="bioma__botao">
+            <button onclick="abrePampa()" class="botao">Ver mais</button>
+          </div>
+        </div>
+        <div class="bioma">
+          <div class="bioma__imagem">
+            <img class="imagem" src="imagens/pantanal.jpg" alt="pantanal" />
+          </div>
+          <div class="bioma__titulo">Pantanal</div>
+          <div class="bioma__texto">
+            Maior planície alagável do mundo, é uma importante área de
+            biodiversidade, com uma variedade única de habitats aquáticos e
+            terrestres. É lar de uma abundância de espécies animais, incluindo
+            aves, peixes, mamíferos e répteis, mas está enfrentando ameaças
+            crescentes devido ao desmatamento, poluição e mudanças climáticas.
+          </div>
+          <div class="bioma__botao">
+            <button onclick="abrePantanal()" class="botao">Ver mais</button>
+          </div>
+        </div>
+      </div>
+      <div id="pop-up-amazonia" class="pop-up">
+        <div class="fundo"></div>
+        <div class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Amazônia</div>
+          <div class="pop-up__texto">
+            Estados do Brasil: Amazonas, Pará, Acre, Rondônia, Amapá, Roraima,
+            Tocantins, parte do Maranhão e parte do Amapá. <br /><br />
+            Área de extensão: Aproximadamente 5,5 milhões de km². <br /><br />
+            Características da flora: Diversidade extraordinária, incluindo
+            árvores gigantes, palmeiras, lianas e uma grande variedade de
+            plantas medicinais. <br /><br />
+            Características da fauna: Inclui jaguares, onças-pintadas,
+            tamanduás, preguiças, macacos, aves como araras e tucanos, e uma
+            enorme diversidade de peixes, répteis e insetos.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              class="imagem-pop"
+              src="imagens/mapa_amazonia.png"
+              alt="mapa amazonia"
+            />
+          </div>
+          <button onclick="fechaAmazonia()" class="botao-pop">Voltar</button>
+        </div>
+      </div>
+      <div id="pop-up-caatinga" class="pop-up">
+        <div class="fundo"></div>
+        <div class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Caatinga</div>
+          <div class="pop-up__texto">
+            Estados do Brasil: Alagoas, Bahia, Ceará, Maranhão, Pernambuco,
+            Paraíba, Rio Grande do Norte, Sergipe, parte do Piauí e parte do
+            norte de Minas Gerais. <br /><br />
+            Área de extensão: Cerca de 800 mil km². <br /><br />
+            Características da flora: Vegetação adaptada à seca, com cactos,
+            arbustos espinhosos, árvores de pequeno porte e plantas suculentas.
+            <br /><br />
+            Características da fauna: Adaptada à escassez de água, incluindo
+            espécies como o tatu-bola, o mico-leão-dourado, o gato-mourisco,
+            serpentes, aves como o carcará e o gavião-real, além de uma
+            variedade de répteis.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              class="imagem-pop"
+              src="imagens/mapa_caatinga.png"
+              alt="mapa caatinga"
+            />
+          </div>
+          <button onclick="fechaCaatinga()" class="botao-pop">Voltar</button>
+        </div>
+      </div>
+      <div id="pop-up-cerrado" class="pop-up">
+        <div class="fundo"></div>
+        <div class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Cerrado</div>
+          <div class="pop-up__texto">
+            Estados do Brasil: Goiás, Mato Grosso, Mato Grosso do Sul,
+            Tocantins, Minas Gerais, Bahia, Maranhão, Piauí, Rondônia, São
+            Paulo, Paraná e Distrito Federal. <br /><br />
+            Área de extensão: Cerca de 2 milhões de km². <br /><br />
+            Características da flora: Vegetação composta por árvores baixas,
+            arbustos e gramíneas resistentes à seca, incluindo espécies como o
+            ipê, o pequi e o buriti. <br /><br />
+            Características da fauna: Diversidade de animais, incluindo
+            lobo-guará, tamanduá-bandeira, tatu-canastra, emas, araras, seriemas
+            e uma variedade de répteis e insetos.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              class="imagem-pop"
+              src="imagens/mapa_cerrado.png"
+              alt="mapa cerrado"
+            />
+          </div>
+          <button onclick="fechaCerrado()" class="botao-pop">Voltar</button>
+        </div>
+      </div>
+      <div id="pop-up-mata" class="pop-up">
+        <div class="fundo"></div>
+        <div class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Mata Atlântica</div>
+          <div class="pop-up__texto">
+            Estados do Brasil: Abrange todos os estados da costa leste
+            brasileira, desde o Rio Grande do Norte até o Rio Grande do Sul.
+            <br /><br />
+            Área de extensão: Originalmente, cerca de 1,3 milhão de km², hoje
+            restam menos de 100 mil km². <br /><br />
+            Características da flora: Grande diversidade de espécies arbóreas,
+            epífitas, lianas e samambaias, incluindo exemplares como a figueira,
+            a canela e o pau-brasil. <br /><br />
+            Características da fauna: Rica em biodiversidade, com espécies como
+            o mico-leão-da-cara-dourada, o muriqui, a onça-pintada, o tucano, o
+            papagaio e uma variedade de anfíbios e répteis.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              class="imagem-pop"
+              src="imagens/mapa_mata.png"
+              alt="mapa mata amazonica"
+            />
+          </div>
+          <button onclick="fechaMata()" class="botao-pop">Voltar</button>
+        </div>
+      </div>
+      <div id="pop-up-pampa" class="pop-up">
+        <div class="fundo"></div>
+        <div class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Pampa</div>
+          <div class="pop-up__texto">
+            Estados do Brasil: Rio Grande do Sul. <br /><br />
+            Área de extensão: Cerca de 176 mil km². <br /><br />
+            Características da flora: Vegetação composta principalmente por
+            campos abertos, com predominância de gramíneas como o
+            capim-barba-de-bode, algumas árvores isoladas e matas de galeria ao
+            longo dos rios. <br /><br />
+            Características da fauna: Inclui espécies como o veado-do-pampa, o
+            lobo-guará, a jaguatirica, aves como o quero-quero e o chimango,
+            além de uma variedade de répteis e pequenos mamíferos.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              class="imagem-pop"
+              src="imagens/mapa_pampa.png"
+              alt="mapa pampa"
+            />
+          </div>
+          <button onclick="fechaPampa()" class="botao-pop">Voltar</button>
+        </div>
+      </div>
+      <div id="pop-up-pantanal" class="pop-up">
+        <div class="fundo"></div>
+        <div class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Pantanal</div>
+          <div class="pop-up__texto">
+            Estados do Brasil: Mato Grosso e Mato Grosso do Sul. <br /><br />
+            Área de extensão: Cerca de 150 mil km² durante a estação seca,
+            podendo chegar a até 250 mil km² durante a estação chuvosa.
+            <br /><br />
+            Características da flora: Vegetação adaptada a ambientes alagados,
+            incluindo gramíneas, palmeiras, árvores como o ipê e o aroeira, e
+            plantas aquáticas como o aguapé. <br /><br />
+            Características da fauna: Rico em biodiversidade, com espécies como
+            a onça-pintada, o cervo-do-pantanal, a capivara, o jacaré, a
+            arara-azul, o tuiuiú e uma variedade de peixes, répteis e aves
+            aquáticas.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              class="imagem-pop"
+              src="imagens/mapa_pantanal.png"
+              alt="mapa pantanal"
+            />
+          </div>
+          <button onclick="fechaPantanal()" class="botao-pop">Voltar</button>
+        </div>
+      </div>
+    </main>
+    <script defer src="script.js"></script>
+  </body>
+</html>
