@@ -118,8 +118,19 @@ main h2 {
   width: 400px;
   height: 400px;
   position: relative;
-  top: -350px;
+}
+
+#amN1 {
+  top: -337px;
   left: 250px;
+}
+
+#amN2 {
+  width: 300px;
+  height: 300px;
+  top: -290px;
+  left: 250px;
+  margin-bottom: 100px;
 }
 
 .bioma__titulo {
@@ -131,13 +142,9 @@ main h2 {
   padding: 0 10px;
 }
 
-.pop-up {
+/* .pop-up {
   display: none;
-}
-
-.aparece {
-  display: block;
-}
+} */
 
 .fundo {
   width: 100vw;
@@ -147,9 +154,11 @@ main h2 {
   top: 0;
   left: 0;
   z-index: 9997;
+  display: none;
 }
 
 .pop-up-bioma {
+  display: none;
   position: fixed;
   top: calc(50vh - 300px);
   left: calc(50vw - 500px);
@@ -160,6 +169,10 @@ main h2 {
   padding: 20px;
   z-index: 9998;
   overflow: hidden;
+}
+
+.aparece {
+  display: block;
 }
 
 .barra-laranja {
@@ -186,10 +199,21 @@ main h2 {
 
 .pop-up__texto {
   width: 500px;
+  height: 250px;
   text-align: left;
 }
 
 .botao-pop {
   position: relative;
-  top: -350px;
+  top: -325px;
+  margin: 0 15px;
+}
+
+.botao-mata {
+  top: -415px;
+}
+
+.invisivel {
+  opacity: 0;
+  cursor: default;
 }

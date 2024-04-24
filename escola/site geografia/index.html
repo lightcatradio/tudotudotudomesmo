@@ -20,6 +20,9 @@
       <h2>
         Aqui estão os seis principais biomas presentes no território brasileiro:
       </h2>
+
+      <!-- -------------------- BIOMAS --------------------- -->
+
       <div class="container espaco-G">
         <div class="bioma">
           <div class="bioma__imagem">
@@ -117,9 +120,17 @@
           </div>
         </div>
       </div>
-      <div id="pop-up-amazonia" class="pop-up">
-        <div class="fundo"></div>
-        <div class="pop-up-bioma">
+
+      <!-- ------------------------------------------------- -->
+
+      <!-- -------------------- POP-UPS -------------------- -->
+
+      <div id="fundo" class="fundo"></div>
+
+      <!-- ----- AMAZONIA ----- -->
+
+      <div class="pop-up">
+        <div id="pop-up-amazonia-principal" class="pop-up-bioma">
           <div class="barra-laranja"></div>
           <div class="pop-up__titulo">Amazônia</div>
           <div class="pop-up__texto">
@@ -135,17 +146,47 @@
           </div>
           <div class="pop-up__imagens">
             <img
+              id="amN1"
               class="imagem-pop"
               src="imagens/mapa_amazonia.png"
               alt="mapa amazonia"
             />
           </div>
-          <button onclick="fechaAmazonia()" class="botao-pop">Voltar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
+          <button onclick="fechaAmazonia()" class="botao-pop">Fechar</button>
+          <button onclick="proximoAmazonia()" class="botao-pop">Proximo</button>
+        </div>
+        <div id="pop-up-amazonia-secundario" class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Amazônia | Sustentabilidade</div>
+          <div class="pop-up__texto">
+            Problemas: Desmatamento, mineração ilegal, expansão agrícola,
+            queimadas e infraestrutura inadequada. <br /><br />
+            Estratégias de conservação: Reforço da fiscalização, criação e
+            fortalecimento de áreas protegidas, desenvolvimento de práticas
+            agrícolas sustentáveis, incentivo à economia florestal e engajamento
+            das comunidades locais na gestão sustentável dos recursos.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              id="amN2"
+              class="imagem-pop"
+              src="imagens/sustentabilidade.png"
+              alt="sustentabilidade"
+            />
+          </div>
+          <button onclick="anteriorAmazonia()" class="botao-pop">
+            Anterior
+          </button>
+          <button onclick="fechaAmazonia()" class="botao-pop">Fechar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
         </div>
       </div>
-      <div id="pop-up-caatinga" class="pop-up">
-        <div class="fundo"></div>
-        <div class="pop-up-bioma">
+
+      <!-- ----- CAATINGA ----- -->
+
+      <div class="pop-up">
+        <div id="pop-up-caatinga-principal" class="pop-up-bioma">
           <div class="barra-laranja"></div>
           <div class="pop-up__titulo">Caatinga</div>
           <div class="pop-up__texto">
@@ -163,17 +204,48 @@
           </div>
           <div class="pop-up__imagens">
             <img
+              id="amN1"
               class="imagem-pop"
               src="imagens/mapa_caatinga.png"
               alt="mapa caatinga"
             />
           </div>
-          <button onclick="fechaCaatinga()" class="botao-pop">Voltar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
+          <button onclick="fechaCaatinga()" class="botao-pop">Fechar</button>
+          <button onclick="proximoCaatinga()" class="botao-pop">Proximo</button>
+        </div>
+        <div id="pop-up-caatinga-secundario" class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Caatinga | Sustentabilidade</div>
+          <div class="pop-up__texto">
+            Problemas: Desmatamento para agricultura e pecuária, sobrepastoreio,
+            desertificação, extrativismo predatório e falta de acesso à água.
+            <br /><br />
+            Estratégias de conservação: Implantação de projetos de manejo
+            sustentável, promoção da convivência com o semiárido, restauração de
+            áreas degradadas, incentivo à agricultura familiar e programas de
+            educação ambiental e capacitação.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              id="amN2"
+              class="imagem-pop"
+              src="imagens/sustentabilidade.png"
+              alt="sustentabilidade"
+            />
+          </div>
+          <button onclick="anteriorCaatinga()" class="botao-pop">
+            Anterior
+          </button>
+          <button onclick="fechaCaatinga()" class="botao-pop">Fechar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
         </div>
       </div>
-      <div id="pop-up-cerrado" class="pop-up">
-        <div class="fundo"></div>
-        <div class="pop-up-bioma">
+
+      <!-- ----- CERRADO  ----- -->
+
+      <div class="pop-up">
+        <div id="pop-up-cerrado-principal" class="pop-up-bioma">
           <div class="barra-laranja"></div>
           <div class="pop-up__titulo">Cerrado</div>
           <div class="pop-up__texto">
@@ -190,17 +262,48 @@
           </div>
           <div class="pop-up__imagens">
             <img
+              id="amN1"
               class="imagem-pop"
               src="imagens/mapa_cerrado.png"
               alt="mapa cerrado"
             />
           </div>
-          <button onclick="fechaCerrado()" class="botao-pop">Voltar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
+          <button onclick="fechaCerrado()" class="botao-pop">Fechar</button>
+          <button onclick="proximoCerrado()" class="botao-pop">Proximo</button>
+        </div>
+        <div id="pop-up-cerrado-secundario" class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Cerrado | Sustentabilidade</div>
+          <div class="pop-up__texto">
+            Problemas: Desmatamento para agricultura e pecuária, fragmentação do
+            habitat, incêndios florestais e uso insustentável dos recursos
+            hídricos. <br /><br />
+            Estratégias de conservação: Criação e ampliação de unidades de
+            conservação, implementação de políticas de uso da terra sustentável,
+            promoção da restauração de áreas degradadas, incentivo à
+            agroecologia e educação ambiental.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              id="amN2"
+              class="imagem-pop"
+              src="imagens/sustentabilidade.png"
+              alt="sustentabilidade"
+            />
+          </div>
+          <button onclick="anteriorCerrado()" class="botao-pop">
+            Anterior
+          </button>
+          <button onclick="fechaCerrado()" class="botao-pop">Fechar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
         </div>
       </div>
-      <div id="pop-up-mata" class="pop-up">
-        <div class="fundo"></div>
-        <div class="pop-up-bioma">
+
+      <!-- ----- MATA ATLANTICA ----- -->
+
+      <div class="pop-up">
+        <div id="pop-up-mata-principal" class="pop-up-bioma">
           <div class="barra-laranja"></div>
           <div class="pop-up__titulo">Mata Atlântica</div>
           <div class="pop-up__texto">
@@ -218,17 +321,50 @@
           </div>
           <div class="pop-up__imagens">
             <img
+              id="amN1"
               class="imagem-pop"
               src="imagens/mapa_mata.png"
-              alt="mapa mata amazonica"
+              alt="mapa mata"
             />
           </div>
-          <button onclick="fechaMata()" class="botao-pop">Voltar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
+          <button onclick="fechaMata()" class="botao-pop">Fechar</button>
+          <button onclick="proximoMata()" class="botao-pop">Proximo</button>
+        </div>
+        <div id="pop-up-mata-secundario" class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Mata Atlântica | Sustentabilidade</div>
+          <div class="pop-up__texto">
+            Problemas: Desmatamento histórico, urbanização desordenada,
+            fragmentação do habitat, poluição e tráfico de animais e plantas.
+            <br /><br />
+            Estratégias de conservação: Criação e fortalecimento de unidades de
+            conservação, implementação de planos de manejo, restauração de
+            corredores ecológicos, fiscalização e combate ao comércio ilegal de
+            espécies.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              id="amN2"
+              class="imagem-pop"
+              src="imagens/sustentabilidade.png"
+              alt="sustentabilidade"
+            />
+          </div>
+          <button onclick="anteriorMata()" class="botao-pop botao-mata">
+            Anterior
+          </button>
+          <button onclick="fechaMata()" class="botao-pop botao-mata">
+            Fechar
+          </button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
         </div>
       </div>
-      <div id="pop-up-pampa" class="pop-up">
-        <div class="fundo"></div>
-        <div class="pop-up-bioma">
+
+      <!-- ----- PAMPA ----- -->
+
+      <div class="pop-up">
+        <div id="pop-up-pampa-principal" class="pop-up-bioma">
           <div class="barra-laranja"></div>
           <div class="pop-up__titulo">Pampa</div>
           <div class="pop-up__texto">
@@ -244,17 +380,46 @@
           </div>
           <div class="pop-up__imagens">
             <img
+              id="amN1"
               class="imagem-pop"
               src="imagens/mapa_pampa.png"
               alt="mapa pampa"
             />
           </div>
-          <button onclick="fechaPampa()" class="botao-pop">Voltar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
+          <button onclick="fechaPampa()" class="botao-pop">Fechar</button>
+          <button onclick="proximoPampa()" class="botao-pop">Proximo</button>
+        </div>
+        <div id="pop-up-pampa-secundario" class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Pampa | Sustentabilidade</div>
+          <div class="pop-up__texto">
+            Problemas: Conversão de áreas naturais para agricultura e pecuária,
+            fragmentação do habitat, perda de biodiversidade, eutrofização de
+            rios e assoreamento. <br /><br />
+            Estratégias de conservação: Criação de unidades de conservação,
+            estímulo à pecuária sustentável, manejo adequado dos recursos
+            hídricos, promoção de práticas agrícolas menos impactantes e
+            envolvimento das comunidades locais na gestão ambiental.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              id="amN2"
+              class="imagem-pop"
+              src="imagens/sustentabilidade.png"
+              alt="sustentabilidade"
+            />
+          </div>
+          <button onclick="anteriorPampa()" class="botao-pop">Anterior</button>
+          <button onclick="fechaPampa()" class="botao-pop">Fechar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
         </div>
       </div>
-      <div id="pop-up-pantanal" class="pop-up">
-        <div class="fundo"></div>
-        <div class="pop-up-bioma">
+
+      <!-- ----- PANTANAL ----- -->
+
+      <div class="pop-up">
+        <div id="pop-up-pantanal-principal" class="pop-up-bioma">
           <div class="barra-laranja"></div>
           <div class="pop-up__titulo">Pantanal</div>
           <div class="pop-up__texto">
@@ -272,14 +437,45 @@
           </div>
           <div class="pop-up__imagens">
             <img
+              id="amN1"
               class="imagem-pop"
               src="imagens/mapa_pantanal.png"
               alt="mapa pantanal"
             />
           </div>
-          <button onclick="fechaPantanal()" class="botao-pop">Voltar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
+          <button onclick="fechaPantanal()" class="botao-pop">Fechar</button>
+          <button onclick="proximoPantanal()" class="botao-pop">Proximo</button>
+        </div>
+        <div id="pop-up-pantanal-secundario" class="pop-up-bioma">
+          <div class="barra-laranja"></div>
+          <div class="pop-up__titulo">Pantanal | Sustentabilidade</div>
+          <div class="pop-up__texto">
+            Problemas: Desmatamento, queimadas, poluição da água, assoreamento
+            de rios, construção de barragens e atividades agropecuárias
+            intensivas. <br /><br />
+            Estratégias de conservação: Implementação de planos de manejo
+            integrado, monitoramento da qualidade da água, educação ambiental
+            para comunidades locais, controle do turismo sustentável e apoio à
+            pesquisa científica para entender e proteger o ecossistema.
+          </div>
+          <div class="pop-up__imagens">
+            <img
+              id="amN2"
+              class="imagem-pop"
+              src="imagens/sustentabilidade.png"
+              alt="sustentabilidade"
+            />
+          </div>
+          <button onclick="anteriorPantanal()" class="botao-pop">
+            Anterior
+          </button>
+          <button onclick="fechaPantanal()" class="botao-pop">Fechar</button>
+          <button class="botao-pop invisivel">lorem ipsum</button>
         </div>
       </div>
+
+      <!-- ------------------------------------------------- -->
     </main>
     <script defer src="script.js"></script>
   </body>
