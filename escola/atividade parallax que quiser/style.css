@@ -1,0 +1,92 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(15, 37, 231, 0.788);
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.parallax1 {
+  background-image: url("imagens/twd1.jpg");
+}
+
+.parallax2 {
+  background-image: url("imagens/twd2.jpg");
+}
+
+.parallax3 {
+  background-image: url("imagens/twd3.jpg");
+}
+
+.parallax4 {
+  background-image: url("imagens/twd4.jpg");
+}
+
+.content {
+  min-height: 400px;
+  background-color: white;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 0;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+footer {
+  background-color: rgba(8, 127, 182, 0.479);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
