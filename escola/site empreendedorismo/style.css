@@ -8,23 +8,78 @@
   text-decoration: none;
 }
 
+div {
+  /* border: red 1px solid; */
+}
+
 body {
   width: 100vw;
   height: 100vh;
   background-color: #020617;
   color: #f8fafc;
-  overflow-y: visible;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
+.pages {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.container:first-child {
+  margin-top: 3rem;
+}
+
+.span-title {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.front-page {
+  height: 100vh;
+  width: 100vw;
+  gap: 3vw;
+  display: flex;
+}
+
+.front-page__left {
+  flex: 1 2 35vw;
+}
+
+.front-page__right {
+  flex: 2 1 65vw;
+}
+
+.front-page__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.fpl__icon {
+  width: 350px;
+}
+
+.flr__image {
+  width: 100%;
+}
+
 /* ---------- UTILIDADES ---------- */
 
 .container {
   width: calc(100vw - 2rem);
-  margin: 3rem 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
   padding: 5rem;
   border-radius: 20px;
   background-color: #0f172a;
