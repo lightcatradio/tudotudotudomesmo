@@ -34,45 +34,65 @@ body::-webkit-scrollbar {
   margin-top: 3rem;
 }
 
-.span-title {
-  font-size: 1.5em;
-  text-decoration: underline;
+.container:last-child {
+  margin-bottom: 3rem;
 }
 
 .front-page {
   height: 100vh;
   width: 100vw;
-  gap: 3vw;
   display: flex;
-}
-
-.front-page__left {
-  flex: 1 2 35vw;
 }
 
 .front-page__right {
-  flex: 2 1 65vw;
+  flex: 2 1 55vw;
+  background-color: #0f172a;
+  background-image: url(https://opceve.com.br/wp-content/uploads/2022/05/blueprints-gb33172cb0_1920.jpg);
+  background-size: cover;
+  border-radius: 50px;
+  position: relative;
+  left: 45px;
 }
 
 .front-page__left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding-top: 2rem;
+  flex: 1 2 45vw;
 }
 
-h1 {
-  font-size: 1.8em;
+.front-page__left h2 {
+  margin-top: 5rem;
+  font-size: 1.7em;
+}
+
+.left__texts {
+  width: calc(45vw - 4rem);
+  height: 250px;
+  margin: calc(45vh - 125px) 2rem 0 2rem;
+  position: absolute;
   text-align: center;
 }
 
-.fpl__icon {
-  width: 350px;
+.span-subtitle,
+.span-title {
+  font-size: 1.7em;
+  text-decoration: underline;
 }
 
-.flr__image {
-  width: 100%;
+h1 {
+  font-size: 1.7em;
+}
+
+.left__arrow {
+  border-top: 30px solid #f8fafc;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  float: left;
+  position: absolute;
+  top: 675px;
+  left: calc(22.5vw - 60px);
+}
+
+.left__arrow:hover {
+  animation: upanddown 0.5s ease-in infinite;
 }
 
 /* ---------- UTILIDADES ---------- */
@@ -106,4 +126,28 @@ h1 {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
+}
+
+/* ---------- KEYFRAMES ---------- */
+
+@keyframes upanddown {
+  0% {
+    top: 675px;
+  }
+
+  25% {
+    top: 670px;
+  }
+
+  50% {
+    top: 675px;
+  }
+
+  75% {
+    top: 680px;
+  }
+
+  100% {
+    top: 675px;
+  }
 }
