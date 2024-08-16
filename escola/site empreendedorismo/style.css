@@ -12,6 +12,10 @@ div {
   /* border: red 1px solid; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -23,79 +27,88 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.front-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://aquinascollege.ca/wp-content/uploads/2024/02/Entrepreneurship.jpg);
+  background-size: cover;
+  padding-top: 5vh;
+}
+
+.front-page-block {
+  width: 40vw;
+  height: 80vh;
+  margin: auto;
+  background-color: #0f172a;
+  border-radius: 30px;
+  padding: 1.5rem;
+}
+
+.block__image {
+  width: 250px;
+  margin-left: 155px;
+  margin-bottom: 30px;
+}
+
+.block__texts h1 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.block__texts h2 {
+  margin-top: 3rem;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.span-title,
+.span-subtitle {
+  font-size: 1.75em;
+}
+
+.about-page {
+  width: 100vw;
+  height: 100vh;
+  padding: calc(10vh + 3rem) 3rem 3rem 3rem;
+  background-color: #0f172a;
+  border-radius: 40px;
+  position: relative;
+  top: -10vh;
+}
+
+.about__arrow {
+  border-top: 40px solid #f8fafc;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  float: left;
+  position: absolute;
+  top: 2.5vh;
+  left: calc(50vw - 80px);
+}
+
+.about__arrow:hover {
+  animation: upanddown 0.5s ease infinite;
+}
+
+.about__texts {
+  width: calc(50vw - 3rem);
+}
+
+.about__texts h2 {
+  font-size: 5em;
+  margin-bottom: 5rem;
+}
+
+.about__texts p {
+  font-size: 1.2em;
+}
+
 .pages {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-
-.container:first-child {
-  margin-top: 3rem;
-}
-
-.container:last-child {
-  margin-bottom: 3rem;
-}
-
-.front-page {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-}
-
-.front-page__right {
-  flex: 2 1 55vw;
-  background-color: #0f172a;
-  background-image: url(https://opceve.com.br/wp-content/uploads/2022/05/blueprints-gb33172cb0_1920.jpg);
-  background-size: cover;
-  border-radius: 50px;
-  position: relative;
-  left: 45px;
-}
-
-.front-page__left {
-  flex: 1 2 45vw;
-}
-
-.front-page__left h2 {
-  margin-top: 5rem;
-  font-size: 1.7em;
-}
-
-.left__texts {
-  width: calc(45vw - 4rem);
-  height: 250px;
-  margin: calc(45vh - 125px) 2rem 0 2rem;
-  position: absolute;
-  text-align: center;
-}
-
-.span-subtitle,
-.span-title {
-  font-size: 1.7em;
-  text-decoration: underline;
-}
-
-h1 {
-  font-size: 1.7em;
-}
-
-.left__arrow {
-  border-top: 30px solid #f8fafc;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  float: left;
-  position: absolute;
-  top: 675px;
-  left: calc(22.5vw - 60px);
-}
-
-.left__arrow:hover {
-  animation: upanddown 0.5s ease-in infinite;
-}
-
-/* ---------- UTILIDADES ---------- */
 
 .container {
   width: calc(100vw - 2rem);
@@ -132,22 +145,22 @@ h1 {
 
 @keyframes upanddown {
   0% {
-    top: 675px;
+    top: 2.5vh;
   }
 
   25% {
-    top: 670px;
+    top: 2.2vh;
   }
 
   50% {
-    top: 675px;
+    top: 2.5vh;
   }
 
   75% {
-    top: 680px;
+    top: 2.8vh;
   }
 
   100% {
-    top: 675px;
+    top: 2.5vh;
   }
 }
