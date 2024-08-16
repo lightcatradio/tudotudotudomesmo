@@ -27,10 +27,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* ---------- INDEX ---------- */
+
 .front-page {
   width: 100vw;
   height: 100vh;
-  background-image: url(https://aquinascollege.ca/wp-content/uploads/2024/02/Entrepreneurship.jpg);
+  background-image: url(img/fundo.jpg);
   background-size: cover;
   padding-top: 5vh;
 }
@@ -74,20 +76,33 @@ body::-webkit-scrollbar {
   border-radius: 40px;
   position: relative;
   top: -10vh;
+  display: flex;
 }
 
-.about__arrow {
+.about__arrow,
+.about__arrow2 {
   border-top: 40px solid #f8fafc;
   border-left: 80px solid transparent;
   border-right: 80px solid transparent;
   float: left;
   position: absolute;
-  top: 2.5vh;
   left: calc(50vw - 80px);
+}
+
+.about__arrow {
+  top: 2.5vh;
+}
+
+.about__arrow2 {
+  top: 92.5vh;
 }
 
 .about__arrow:hover {
   animation: upanddown 0.5s ease infinite;
+}
+
+.about__arrow2:hover {
+  animation: upanddown2 0.5s ease infinite;
 }
 
 .about__texts {
@@ -103,6 +118,14 @@ body::-webkit-scrollbar {
   font-size: 1.2em;
 }
 
+.about__image {
+  width: 750px;
+  height: 500px;
+  border-radius: 20px;
+  background-image: url(https://assets-blog.pagseguro.uol.com.br/wp-content/2021/10/o-que-e-empreendedorismo-e-como-comecar.jpg);
+  background-size: cover;
+}
+
 .pages {
   overflow: hidden;
   display: flex;
@@ -111,21 +134,35 @@ body::-webkit-scrollbar {
 }
 
 .container {
+  height: 210px;
   width: calc(100vw - 2rem);
   margin: 0 1rem 0 1rem;
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 20px;
   background-color: #0f172a;
+  display: flex;
+}
+
+.container:hover {
+  .container-texts__title {
+    font-size: 3.6em;
+  }
+}
+
+.container-texts {
+  display: flex;
+  align-items: center;
 }
 
 .container-texts__title {
   font-size: 3.5em;
-  margin-bottom: 2rem;
   width: calc(50vw - 5rem);
+  transition: all 500ms;
 }
 
 .container-texts__subtext {
-  width: calc(50vw - 5rem);
+  width: calc(40vw - 5rem);
+  text-align: center;
 }
 
 .hidden {
@@ -139,6 +176,120 @@ body::-webkit-scrollbar {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
+}
+
+#2 {
+  transition-delay: 500ms;
+}
+
+#3 {
+  transition-delay: 1000ms;
+}
+
+/* ---------- PÁGINAS ----------- */
+
+header {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  top: -2vh;
+}
+
+#header__index,
+#header__sobre,
+#header__dicas,
+#header__estudos,
+#header__recursos {
+  flex: 1 1 20vw;
+  height: 10vh;
+  padding-top: calc(6vh - 15px);
+}
+
+#header__index {
+  background-color: #60a5fa;
+}
+
+#header__sobre {
+  background-color: #3b82f6;
+}
+
+#header__dicas {
+  background-color: #2563eb;
+}
+
+#header__estudos {
+  background-color: #1d4ed8;
+}
+
+#header__recursos {
+  background-color: #1e40af;
+}
+
+header a {
+  transition: all 200ms;
+}
+
+header a:hover {
+  filter: brightness(1.5);
+}
+
+.main-page {
+  padding: 5rem;
+}
+
+.main-page h1 {
+  font-size: 3.5em;
+  margin-bottom: 5rem;
+}
+
+.main-page p {
+  font-size: 1.2em;
+  width: calc(50vw - 5rem);
+  text-align: justify;
+}
+
+.main__pop,
+.main__links {
+  width: calc(50vw - 10rem);
+  padding: 2rem;
+  background-color: #0f172a;
+  border-radius: 20px;
+  position: absolute;
+  right: 5rem;
+}
+
+.main__pop {
+  height: 400px;
+  bottom: 5rem;
+}
+
+.main__links {
+  height: 525px;
+  bottom: 5rem;
+}
+
+.main__pop h2,
+.main__links h2 {
+  font-size: 2em;
+  margin-bottom: 2rem;
+}
+
+.main__pop p,
+.main__links p,
+.main__links ol {
+  width: calc((50vw - 10rem) - 4rem);
+}
+
+li {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  text-decoration: underline;
 }
 
 /* ---------- KEYFRAMES ---------- */
@@ -162,5 +313,27 @@ body::-webkit-scrollbar {
 
   100% {
     top: 2.5vh;
+  }
+}
+
+@keyframes upanddown2 {
+  0% {
+    top: 92.5vh;
+  }
+
+  25% {
+    top: 92.2vh;
+  }
+
+  50% {
+    top: 92.5vh;
+  }
+
+  75% {
+    top: 92.8vh;
+  }
+
+  100% {
+    top: 92.5vh;
   }
 }
