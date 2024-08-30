@@ -1,3 +1,53 @@
-.elemento {
-  line-height: 30px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 4fr; /* Define duas colunas: barra lateral (1fr), conteúdo (3fr) */
+  grid-template-rows: 1fr 4fr 1fr; /* Define três linhas: cabeçalho, conteúdo flexível, rodapé */
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  gap: 10px; /* Espaço entre os itens */
+}
+body {
+  margin: auto;
+  width: 75vw;
+  height: 80vh;
+  margin-top: 10vh;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1fr 1fr 4fr 4fr 1fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "aside section"
+    "aside article"
+    "footer footer";
+}
+body > * {
+  border: 3px black solid;
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+aside {
+  grid-area: aside;
+}
+section {
+  grid-area: section;
+}
+article {
+  grid-area: article;
+}
+footer {
+  grid-area: footer;
 }
