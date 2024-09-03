@@ -4,16 +4,7 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: 2fr 4fr; /* Define duas colunas: barra lateral (1fr), conteúdo (3fr) */
-  grid-template-rows: 1fr 4fr 1fr; /* Define três linhas: cabeçalho, conteúdo flexível, rodapé */
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
-  gap: 10px; /* Espaço entre os itens */
-}
+
 body {
   margin: auto;
   width: 75vw;
