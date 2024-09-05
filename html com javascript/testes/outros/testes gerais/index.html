@@ -4,28 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testes</title>
-    <script>
-      function aleatorio(maximo) {
-        return Math.floor(Math.random() * maximo);
+    <style>
+      button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        width: 150px;
+        font-size: 0.75em;
       }
-      function carregamento() {
-        const barra = document.getElementById("carrega");
-        let valorAtual = parseInt(barra.getAttribute("value"));
-        if (valorAtual < 100) {
-          barra.setAttribute("value", valorAtual + aleatorio(3));
-        } else {
-          clearInterval(intervalId);
-          document.getElementById("texto").style.display = "block";
-        }
+      button:active {
+        filter: brightness(0.9);
       }
-      const intervalId = setInterval(carregamento, 100);
-    </script>
+      h1 {
+        text-align: center;
+      }
+      .botoes {
+        margin: auto;
+        width: max-content;
+      }
+    </style>
   </head>
   <body style="font-family: Arial, Helvetica, sans-serif; font-size: 2em">
     <main>
-      <label for="carrega">Carregando...</label>
-      <progress id="carrega" max="100" value="0"></progress>
-      <h2 id="texto" style="display: none">Carregou!</h2>
+      <h1 id="contador">0</h1>
+      <div class="botoes">
+        <button onclick="aumentar()">Aumentar</button>
+        <button onclick="resetar()">Resetar</button>
+        <button onclick="diminuir()">Diminuir</button>
+      </div>
     </main>
+    <script>
+      let contador = 0;
+      let contadorH1 = document.getElementById("contador");
+      function aumentar() {
+        contador++;
+        contadorH1.textContent = contador;
+      }
+      function resetar() {
+        contador = 0;
+        contadorH1.textContent = contador;
+      }
+      function diminuir() {
+        contador--;
+        contadorH1.textContent = contador;
+      }
+    </script>
   </body>
 </html>
