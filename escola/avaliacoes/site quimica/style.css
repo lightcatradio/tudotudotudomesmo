@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General Sans', sans-serif;
+    color: inherit;
+}
+html {
+    scroll-behavior: smooth;
+}  
+body {
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    display: none;
+}  
+.hero {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+nav a {
+    flex: 1;
+    text-decoration: none;
+    font-weight: normal;
+}
+nav div{
+    height: 5vh;
+    border-left: 2px solid black;
+}
+main, .tabela {
+    height: 100vh;
+}
