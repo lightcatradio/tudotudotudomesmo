@@ -1,3 +1,7 @@
+:root {
+    
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,16 +32,32 @@ nav {
     display: flex;
     align-items: center;
     text-align: center;
+    background-color: #f3f4f6;
 }
 nav a {
     flex: 1;
     text-decoration: none;
     font-weight: normal;
+    font-size: 1.2em;
 }
 nav div{
     height: 5vh;
     border-left: 2px solid black;
 }
-main, .tabela {
-    height: 100vh;
+main {
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+main article {
+    border-radius: 10px;
+    flex: 1;
+    padding: 10px;
+    background-color: #f3f4f6;
+}
+main article h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
 }
