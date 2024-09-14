@@ -1,0 +1,53 @@
+/* ============== PÁGINA PRINCIPAL ============== */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "lado med"
+    "lado tec"
+    "lado amb"
+    "lado ind"
+    "lado ali";
+}
+.med {
+  grid-area: med;
+}
+.tec {
+  grid-area: tec;
+}
+.amb {
+  grid-area: amb;
+}
+.ind {
+  grid-area: ind;
+}
+.ali {
+  grid-area: ali;
+}
+main section {
+  padding: 15px;
+  text-align: justify;
+}
+main aside {
+  grid-area: lado;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+main aside p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main aside img {
+  width: 175px;
+  margin: auto;
+}
+main aside a {
+  padding: 15px 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}

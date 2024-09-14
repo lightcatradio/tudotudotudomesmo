@@ -1,0 +1,110 @@
+/* ============== TABELA ============== */
+
+main {
+  display: flex;
+}
+main aside {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  padding: 30px;
+}
+main aside > p {
+  font-size: 1.2em;
+  text-align: center;
+}
+.table {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(4, 80px);
+  grid-template-areas:
+    "al . ."
+    "ga . ."
+    "in sn ."
+    "tl pb bi";
+  gap: 3px;
+}
+.table > * {
+  border: 3px solid black;
+  background-color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.2s;
+}
+.table > *:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+}
+.name {
+  font-size: 2em;
+}
+.al {
+  grid-area: al;
+}
+.ga {
+  grid-area: ga;
+}
+.in {
+  grid-area: in;
+}
+.sn {
+  grid-area: sn;
+}
+.tl {
+  grid-area: tl;
+}
+.pb {
+  grid-area: pb;
+}
+.bi {
+  grid-area: bi;
+}
+main section {
+  flex: 1;
+  background-color: #cbd5e1;
+  perspective: 1000px;
+}
+.front {
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  transform-style: preserve-3d;
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-radius: 20px;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section:hover .inner {
+  transform: rotateY(180deg);
+}
+.here {
+  display: block;
+}
+.not-here {
+  display: none;
+}
