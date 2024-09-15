@@ -84,10 +84,6 @@ main section {
   color: #f8fafc;
   border-radius: 20px;
   font-size: 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 .front,
 .back {
@@ -96,6 +92,7 @@ main section {
   height: 100%;
   backface-visibility: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -107,4 +104,9 @@ main section:hover .inner {
 }
 .not-here {
   display: none;
+}
+.front img {
+  width: 75%;
+  border-radius: 10px;
+  margin-bottom: 50px;
 }
