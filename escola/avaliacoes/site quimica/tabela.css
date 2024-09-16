@@ -83,7 +83,6 @@ main section {
   background-color: #0f172a;
   color: #f8fafc;
   border-radius: 20px;
-  font-size: 1.5em;
 }
 .front,
 .back {
@@ -95,6 +94,7 @@ main section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 main section:hover .inner {
   transform: rotateY(180deg);
@@ -105,8 +105,16 @@ main section:hover .inner {
 .not-here {
   display: none;
 }
+.front {
+  font-size: 1.5em;
+}
+.back {
+  font-size: 1.25em;
+  text-align: justify;
+}
 .front img {
   width: 75%;
+  border: 10px grey solid;
   border-radius: 10px;
   margin-bottom: 50px;
 }
