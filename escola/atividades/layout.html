@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mais um dia, mais uma atividade de layout</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        color: inherit;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 70vw;
+        height: 100vh;
+        padding: 20px 0;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1.5fr;
+        grid-template-rows: 0.75fr 1fr 1fr 2fr;
+        grid-template-areas:
+          "nav header header"
+          "nav part1 part2"
+          "nav part1 part3"
+          "nav part4 part4";
+      }
+      header {
+        grid-area: header;
+        background-color: #fed7aa;
+      }
+      nav {
+        grid-area: nav;
+        background-color: #fecaca;
+      }
+      .container > * {
+        border: 3px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      p {
+        text-align: justify;
+        font-weight: normal;
+      }
+      .part1 {
+        grid-area: part1;
+        background-color: #fef08a;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+      .part2 {
+        grid-area: part2;
+        background-color: #bbf7d0;
+        font-size: 0.9em;
+        padding: 5px;
+      }
+      .part3 {
+        grid-area: part3;
+        background-color: #bfdbfe;
+        font-size: 0.9em;
+        padding: 5px;
+      }
+      .part4 {
+        grid-area: part4;
+        background-color: #ddd6fe;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .imagens {
+        display: flex;
+        gap: 10px;
+      }
+      .imagens .imagem {
+        width: 200px;
+        height: 200px;
+        border: 2px black solid;
+      }
+      .imagem1 {
+        background-image: url(https://blog.surfmappers.com/wp-content/uploads/2018/12/262720-redator-entregar-ate-1712-conheca-os-principais-campeonatos-de-surf-no-brasil.jpg);
+        background-size: cover;
+      }
+      .imagem2 {
+        background-image: url(https://images.unsplash.com/photo-1502680390469-be75c86b636f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3VyZmV8ZW58MHx8MHx8fDA%3D);
+        background-size: cover;
+      }
+      .imagem3 {
+        background-image: url(https://palavrasdosurf.wordpress.com/wp-content/uploads/2016/11/do-surf-surfistas-mulheres.jpg);
+        background-size: cover;
+      }
+      .imagem4 {
+        background-image: url(https://orlario.com.vc/wp-content/uploads/2020/07/surf-1.jpg);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <nav>Navigation</nav>
+      <div class="part1">
+        <p>
+          O surf é um esporte aquático que envolve deslizar sobre as ondas do
+          mar em uma prancha, combinando equilíbrio, habilidade e uma conexão
+          íntima com a natureza. Originário das antigas culturas polinésias,
+          especialmente no Havaí, o surf evoluiu para se tornar uma atividade
+          popular em todo o mundo, praticada tanto como lazer quanto em
+          competições profissionais. A sensação de surfar uma onda proporciona
+          uma mistura única de adrenalina e liberdade, atraindo pessoas em busca
+          de aventura e de um estilo de vida ao ar livre. Além disso, o surf
+          promove um profundo respeito pelo oceano e seu poder imprevisível.
+        </p>
+      </div>
+      <div class="part2">
+        <p>
+          Uma curiosidade sobre o surf é que, nas antigas culturas havaianas,
+          ele era considerado um esporte dos reis. Chamado de "he'e nalu", o
+          surf era uma prática espiritual e social importante, e a habilidade de
+          surfar bem refletia status e poder.
+        </p>
+      </div>
+      <div class="part3">
+        <p>
+          Outra curiosidade interessante é que a maior onda já surfada foi
+          registrada em Nazaré, Portugal, em 2020, com impressionantes 26,21
+          metros. Essa região é famosa por suas ondas gigantes, atraindo
+          surfistas de elite de todo o mundo em busca de novos recordes.
+        </p>
+      </div>
+      <div class="part4">
+        <h2>Imagens</h2>
+        <div class="imagens">
+          <div class="imagem imagem1"></div>
+          <div class="imagem imagem2"></div>
+          <div class="imagem imagem3"></div>
+          <div class="imagem imagem4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
