@@ -1,93 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-bt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guia das Guerras Brasileiras</title>
-    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap" rel="stylesheet">
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            color: inherit;
-            font-family: 'General Sans', sans-serif;
-            text-decoration: none;
-        }
-        .initial-page {
-            background-color: #f1f5f9;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        .initial-page header {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.6em;
-            background-color: #22c55e;
-            background-image: url(img/header-background.png);
-            background-size: cover;
-            border-bottom: 3px solid black;
-        }
-        .initial-page main {
-            flex: 8;
-            display: flex;
-        }
-        .initial-page main > aside {
-            flex: 1;
-            background-color: #15803d;
-            color: #f8fafc;
-            border-right: 3px solid black;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            font-size: 1.2em;
-        }
-        .initial-page main > .content {
-            flex: 5;
-            display: flex;
-            overflow-x: scroll;
-            scroll-behavior: smooth;
-        }
-        .initial-page main > .content > p {
-            margin-right: 500px;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: inherit;
+        font-family: "General Sans", sans-serif;
+        text-decoration: none;
+      }
+      .initial-page {
+        background-color: #f1f5f9;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .initial-page header {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6em;
+        background-color: #22c55e;
+        background-image: url(img/header-background.png);
+        background-size: cover;
+        border-bottom: 3px solid black;
+      }
+      .initial-page main {
+        flex: 8;
+        display: flex;
+      }
+      .initial-page main > aside {
+        top: 0;
+        position: fixed;
+        width: 20vw;
+        height: 100vh;
+        background-color: #15803d;
+        color: #f8fafc;
+        border-right: 3px solid black;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1.2em;
+      }
+      .initial-page main > .content {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+      }
+      .initial-page main > .content > p {
+        margin-right: 500px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="initial-page">
-        <header>
-            <h2>Guia das Guerras Brasileiras</h2>
-        </header>
-        <main>
-            <aside>
-                <a href="#1">Guerra dos Palmares</a>
-                <a href="#2">Guerra dos Emboabas</a>
-                <a href="#3">Guerra dos Mascates</a>
-                <a href="#4">Inconfidência Mineira</a>
-                <a href="#5">Guerra da Cisplatina</a>
-                <a href="#6">Revolução Farroupilha</a>
-                <a href="#7">Guerra do Paraguai</a>
-                <a href="#8">Revolta da Armada</a>
-                <a href="#9">Revolução Constitucionalista</a>
-                <a href="#10">Participação do Brasil na Segunda Guerra Mundial</a>
-            </aside>
-            <div class="content">
-                <p id="1">Guerra dos Palmares</p>
-                <p id="2">Guerra dos Emboabas</p>
-                <p id="3">Guerra dos Mascates</p>
-                <p id="4">Inconfidência Mineira</p>
-                <p id="5">Guerra da Cisplatina</p>
-                <p id="6">Revolução Farroupilha</p>
-                <p id="7">Guerra do Paraguai</p>
-                <p id="8">Revolta da Armada</p>
-                <p id="9">Revolução Constitucionalista</p>
-                <p id="10">Participação do Brasil na Segunda Guerra Mundial</p>
-            </div>
-        </main>
+      <header>
+        <h2>Guia das Guerras Brasileiras</h2>
+      </header>
+      <main>
+        <aside>
+          <a href="#1">Guerra dos Palmares</a>
+          <a href="#2">Guerra dos Emboabas</a>
+          <a href="#3">Guerra dos Mascates</a>
+          <a href="#4">Inconfidência Mineira</a>
+          <a href="#5">Guerra da Cisplatina</a>
+          <a href="#6">Revolução Farroupilha</a>
+          <a href="#7">Guerra do Paraguai</a>
+          <a href="#8">Revolta da Armada</a>
+          <a href="#9">Revolução Constitucionalista</a>
+          <a href="#10">Participação do Brasil na Segunda Guerra Mundial</a>
+        </aside>
+        <div class="content">
+          <p id="1">Guerra dos Palmares</p>
+          <p id="2">Guerra dos Emboabas</p>
+          <p id="3">Guerra dos Mascates</p>
+          <p id="4">Inconfidência Mineira</p>
+          <p id="5">Guerra da Cisplatina</p>
+          <p id="6">Revolução Farroupilha</p>
+          <p id="7">Guerra do Paraguai</p>
+          <p id="8">Revolta da Armada</p>
+          <p id="9">Revolução Constitucionalista</p>
+          <p id="10">Participação do Brasil na Segunda Guerra Mundial</p>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
