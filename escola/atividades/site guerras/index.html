@@ -39,15 +39,15 @@
         display: flex;
       }
       .initial-page main > aside {
-        top: 0;
+        bottom: 0;
         position: fixed;
         width: 20vw;
-        height: 100vh;
+        height: calc(100vh - 79px);
         background-color: #15803d;
         color: #f8fafc;
         border-right: 3px solid black;
         padding: 30px;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: space-between;
         font-size: 1.2em;
@@ -60,35 +60,29 @@
       .initial-page main > .content > p {
         margin-right: 500px;
       }
-      .initial-page .openclose svg {
-        background-color: none;
-        border: none;
-        color: none;
-        width: 40px;
-      }
     </style>
   </head>
   <body>
     <div class="initial-page">
       <header>
+        <svg
+          onclick="openorclose()"
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="35px"
+          height="35px"
+          viewBox="0 0 50 50"
+          style="cursor: pointer; position: absolute; left: 30px"
+        >
+          <path
+            d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"
+          ></path>
+        </svg>
         <h2>Guia das Guerras Brasileiras</h2>
       </header>
       <main>
-        <aside>
-          <div class="openclose">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="100"
-              height="100"
-              viewBox="0 0 50 50"
-            >
-              <path
-                d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"
-              ></path>
-            </svg>
-          </div>
+        <aside class="openclose">
           <a href="#1">•Guerra dos Palmares</a>
           <a href="#2">• Guerra dos Emboabas</a>
           <a href="#3">• Guerra dos Mascates</a>
@@ -114,5 +108,21 @@
         </div>
       </main>
     </div>
+    <script>
+      function openorclose() {
+        const aside = document.querySelector(".openclose");
+        if (aside.style.display === "none") {
+          aside.style.display = "flex";
+        } else {
+          aside.style.display = "none";
+        }
+      }
+      const scroller = document.querySelector(".content");
+
+      scroller.addEventListener("wheel", function (e) {
+        e.preventDefault();
+        scroller.scrollLeft += e.deltaY * 10;
+      });
+    </script>
   </body>
 </html>
