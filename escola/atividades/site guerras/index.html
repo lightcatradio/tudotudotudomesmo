@@ -8,27 +8,88 @@
       href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header>
-      <h2>Guia das Guerras Brasileiras</h2>
+      <button id="btn" popovertarget="div">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="30px"
+          height="30px"
+          viewBox="0 0 50 50"
+          style="transform: translateY(2px); cursor: pointer"
+        >
+          <path
+            d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"
+          ></path>
+        </svg>
+      </button>
+      <h2>Guia das Guerras</h2>
+      <div id="div" popover>
+        <a href="index.html">Página Inicial</a>
+        <div class="bar"></div>
+        <a href="timeline.html">Página das Guerras</a>
+      </div>
     </header>
+    <div class="hero">
+      <h1>Quais foram as principais guerras do Brasil?</h1>
+      <h2>Venha descobrir agora!</h2>
+      <div class="link">
+        <a href="timeline.html">Ver as guerras</a>
+      </div>
+    </div>
     <main>
-      <div class="container"></div>
-      <div class="content">
-        <p id="1">Guerra dos Palmares</p>
-        <p id="2">Guerra dos Emboabas</p>
-        <p id="3">Guerra dos Mascates</p>
-        <p id="4">Inconfidência Mineira</p>
-        <p id="5">Guerra da Cisplatina</p>
-        <p id="6">Revolução Farroupilha</p>
-        <p id="7">Guerra do Paraguai</p>
-        <p id="8">Revolta da Armada</p>
-        <p id="9">Revolução Constitucionalista</p>
-        <p id="10">Participação do Brasil na Segunda Guerra Mundial</p>
+      <div class="container">
+        <p>
+          Bem-vindo ao Guia das Guerras! Aqui você embarcará em uma jornada pela
+          história dos conflitos que moldaram o nosso país. Das batalhas
+          travadas na época colonial às grandes revoltas internas e à
+          participação brasileira em conflitos globais, este portal oferece uma
+          visão aprofundada dos momentos decisivos da nossa trajetória. Explore
+          as guerras que ajudaram a definir nossas fronteiras, a formação do
+          Estado, e a construção da identidade nacional. Nossa missão é
+          apresentar não só os eventos militares, mas também as suas
+          consequências culturais, políticas e sociais. Prepare-se para conhecer
+          a história do Brasil de um ângulo estratégico e fascinante. Boa
+          navegação!
+        </p>
+      </div>
+      <div class="container">
+        <h2>Por que é importante conhecer a história das guerras no Brasil?</h2>
+        <br />
+        <p>
+          Conhecer a história das guerras no Brasil é fundamental para entender
+          a formação política, social e territorial do país. Desde os conflitos
+          indígenas e coloniais até as guerras de independência, revoltas
+          regionais e a participação em guerras mundiais, cada evento bélico
+          influenciou profundamente a construção da identidade nacional, as
+          dinâmicas de poder e as relações externas. Essas guerras moldaram
+          fronteiras, geraram mudanças no sistema político e social, e
+          refletiram a luta por autonomia e soberania. Além disso, o estudo
+          dessas guerras permite compreender melhor as questões de cidadania,
+          desigualdade e desenvolvimento ao longo da história brasileira.
+        </p>
+      </div>
+      <div class="container">
+        <h2>Sobre quais guerras iremos falar?</h2>
+        <br />
+        <p>
+          Nesse site iremos discutir os conflitos que moldaram a história do
+          Brasil, desde os tempos coloniais até o cenário global do século XX.
+          Entre eles, destacam-se momentos importantes como a luta do Quilombo
+          dos Palmares, a disputa pela riqueza das minas na Guerra dos Emboabas,
+          e as revoltas regionais, como a Guerra dos Mascates e a Revolução
+          Farroupilha. Falaremos também sobre conflitos internacionais, como a
+          Guerra da Cisplatina e a Guerra do Paraguai, além da marcante Segunda
+          Guerra Mundial. Essas guerras refletem não apenas disputas de poder,
+          mas também a busca por autonomia, soberania e identidade ao longo dos
+          séculos.
+        </p>
       </div>
     </main>
-    <script defer src="script.js"></script>
   </body>
 </html>
