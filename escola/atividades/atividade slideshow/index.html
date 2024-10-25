@@ -46,6 +46,20 @@
         padding: 10px 0;
         background-color: brown;
       }
+      .slideshow-container {
+        width: 100vw;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+      }
+      .slideshow-container img {
+        width: 100vw;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -55,6 +69,39 @@
       <a href="#">Decoração</a>
       <a href="#">Contato</a>
     </nav>
+
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="slide1.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide fade">
+        <img src="slide2.jpg" alt="Slide 2" />
+      </div>
+      <div class="slide fade">
+        <img src="slide3.jpg" alt="Slide 3" />
+      </div>
+    </div>
     <h1>Bem-vindo à Loja do Natal</h1>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+    </script>
   </body>
 </html>
