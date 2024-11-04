@@ -52,13 +52,78 @@
 
 // =-=-=-=-=-=-=-=-=-= Exercício 7 =-=-=-=-=-=-=-=-=-=
 
-let idade = window.prompt("Digite sua idade: ");
-idade > 120
-  ? window.alert("Você não existe!")
-  : 120 > idade && idade > 18
-  ? window.alert("Você é adulto!")
-  : 18 > idade && idade > 12
-  ? window.alert("Você é adolescente!")
-  : 12 > idade && idade > 0
-  ? window.alert("Você é criança!")
-  : window.alert("Você não existe!");
+// let idade = window.prompt("Digite sua idade: ");
+// idade > 120
+//   ? window.alert("Você não existe!")
+//   : 120 > idade && idade > 18
+//   ? window.alert("Você é adulto!")
+//   : 18 > idade && idade > 12
+//   ? window.alert("Você é adolescente!")
+//   : 12 > idade && idade > 0
+//   ? window.alert("Você é criança!")
+//   : window.alert("Você não existe!");
+
+// =-=-=-=-=-=-=-=-=-= Exercício 8 =-=-=-=-=-=-=-=-=-=
+
+// function calcular(numero1, numero2, sinal) {
+//   return sinal === "+"
+//     ? numero1 + numero2
+//     : sinal === "-"
+//     ? numero1 - numero2
+//     : sinal === "/"
+//     ? numero1 / numero2
+//     : sinal === "*"
+//     ? numero1 * numero2
+//     : null;
+// }
+
+// window.alert(
+//   calcular(
+//     window.prompt("Digite um número: "),
+//     window.prompt("Digite outro número: "),
+//     window.prompt("Digite a operação (+, -, * ou /): ")
+//   )
+// );
+
+// =-=-=-=-=-=-=-=-=-= Exercício 9 =-=-=-=-=-=-=-=-=-=
+
+// function calcularIMC(peso, altura) {
+//   let imc = peso / (altura * altura);
+//   return imc <= 18.5
+//     ? "Você está em BAIXO PESO"
+//     : 18.6 <= imc && imc <= 24.9
+//     ? "Você está em PESO NORMAL"
+//     : 25 <= imc && imc <= 29.9
+//     ? "Você está em SOBREPESO"
+//     : 30 <= imc
+//     ? "Você está em OBESIDADE"
+//     : null;
+// }
+
+// window.alert(
+//   calcularIMC(
+//     window.prompt("Digite seu peso (kg):"),
+//     window.prompt("Digite sua altura (m):")
+//   )
+// );
+
+// =-=-=-=-=-=-=-=-=-= Exercício 10 =-=-=-=-=-=-=-=-=-=
+
+// function calcularNota(nota) {
+//   nota *= 10;
+//   return 100 >= nota && nota >= 90
+//     ? "Sua nota é A"
+//     : 89 >= nota && nota >= 80
+//     ? "Sua nota é B"
+//     : 79 >= nota && nota >= 70
+//     ? "Sua nota é C"
+//     : 69 >= nota && nota >= 60
+//     ? "Sua nota é D"
+//     : 59 >= nota
+//     ? "Sua nota é F"
+//     : null;
+// }
+
+// window.alert(calcularNota(window.prompt("Digite sua nota (0-10): ")));
+
+// =-=-=-=-=-=-=-=-=-= Exercício 11 =-=-=-=-=-=-=-=-=-=
