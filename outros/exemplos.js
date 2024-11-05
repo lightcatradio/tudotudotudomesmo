@@ -79,3 +79,20 @@
 // console.log(`O valor é: ${circunferencia.toFixed(2)}`);
 
 // =-=-=-=-=-=-=-=-=-= Exercício 8 =-=-=-=-=-=-=-=-=-=
+
+// let temperatura = 69;
+// let temperatureInFahrenheit = temperatura * 1.8 + 32;
+// console.log(`O valor da temperatura é ºF ${temperatureInFahrenheit}`);
+
+// =-=-=-=-=-=-=-=-=-= Exercício 9 =-=-=-=-=-=-=-=-=-=
+
+// let total = 2.5 * 4 * 30;
+// console.log(`O custo total com fraldas é de R$${total}`);
+
+// =-=-=-=-=-=-=-=-=-= Exercício 10 =-=-=-=-=-=-=-=-=-=
+
+console.log(
+  `No primeiro, segundo e terceiro dias foram produzidas 3265, 4127 e 2987 laranjas respectivamente. A diferença entre o primeiro e o terceiro dia é de ${
+    3265 - 2987
+  } laranjas.`
+);

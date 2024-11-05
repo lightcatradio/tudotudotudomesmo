@@ -127,3 +127,84 @@
 // window.alert(calcularNota(window.prompt("Digite sua nota (0-10): ")));
 
 // =-=-=-=-=-=-=-=-=-= Exercício 11 =-=-=-=-=-=-=-=-=-=
+
+// function bhaskara(a, b, c) {
+//   let delta = b ** 2 - 4 * a * c;
+//   let x1 = (-b + Math.sqrt(delta)) / (a * 2);
+//   let x2 = (-b - Math.sqrt(delta)) / (a * 2);
+//   return delta < 0
+//     ? "Não existem raízes reais"
+//     : `O valor de x1 é ${x1} e o valor de x2 é ${x2}!`;
+// }
+
+// window.alert(
+//   bhaskara(
+//     parseFloat(window.prompt("Digite o valor de A: ")),
+//     parseFloat(window.prompt("Digite o valor de B: ")),
+//     parseFloat(window.prompt("Digite o valor de C: "))
+//   )
+// );
+
+// =-=-=-=-=-=-=-=-=-= Exercício 12 =-=-=-=-=-=-=-=-=-=
+
+// function fazTriangulo(lado1, lado2, lado3) {
+//   return lado1 + lado2 > lado3 || lado1 + lado3 > lado2 || lado2 + lado3 > lado1
+//     ? "Os lados não fazem triângulo!"
+//     : lado1 == lado2 && lado2 == lado3
+//     ? "O triângulo é equilátero!"
+//     : lado1 == lado2 || lado2 == lado3 || lado1 == lado3
+//     ? "O triângulo é isósceles!"
+//     : lado1 != lado2 && lado2 != lado3 && lado1 != lado3
+//     ? "O triângulo é escaleno!"
+//     : null;
+// }
+
+// window.alert(
+//   fazTriangulo(
+//     parseFloat(window.prompt("Digite o primeiro lado: ")),
+//     parseFloat(window.prompt("Digite o segundo lado: ")),
+//     parseFloat(window.prompt("Digite o terceiro lado: "))
+//   )
+// );
+
+// =-=-=-=-=-=-=-=-=-= Exercício 13 =-=-=-=-=-=-=-=-=-=
+
+// function juros(C, i, t) {
+//   let J = C * i * t;
+//   return `O valor final será de R$${J.toFixed(2)}`;
+// }
+
+// window.alert(
+//   juros(
+//     parseFloat(window.prompt("Digite o capital inicial: ")),
+//     parseFloat(window.prompt("Digite a taxa de juros: ")),
+//     parseInt(window.prompt("Digite o tempo em meses: "))
+//   )
+// );
+
+// =-=-=-=-=-=-=-=-=-= Exercício 14 =-=-=-=-=-=-=-=-=-=
+
+// function bissexto(ano) {
+//   return ano % 4 != 0
+//     ? "O ano não é bissexto..."
+//     : ano % 100 != 0
+//     ? "O ano é bissexto!"
+//     : ano % 400 == 0
+//     ? "O ano é bissexto!"
+//     : "O ano não é bissexto...";
+// }
+
+// window.alert(bissexto(parseInt(window.prompt("Digite o ano: "))));
+
+// =-=-=-=-=-=-=-=-=-= Exercício 15 =-=-=-=-=-=-=-=-=-=
+
+// function raizExata(numero) {
+//   let raiz = Math.sqrt(numero);
+//   return Number.isInteger(raiz)
+//     ? `A raiz do número é inteira! Ela é ${raiz}`
+//     : `A raiz do número não é inteira... Ela é ${raiz.toFixed(2)}`;
+// }
+
+// window.alert(raizExata(parseFloat(window.prompt("Digite um número: "))));
+
+// =-=-=-=-=-=-=-=-=-= Exercício 16 =-=-=-=-=-=-=-=-=-=
