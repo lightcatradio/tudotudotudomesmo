@@ -208,3 +208,61 @@
 // window.alert(raizExata(parseFloat(window.prompt("Digite um número: "))));
 
 // =-=-=-=-=-=-=-=-=-= Exercício 16 =-=-=-=-=-=-=-=-=-=
+
+// function eOuNaoEPrimo(numero) {
+//   if (numero <= 1) return "Não é primo...";
+//   if (numero <= 3) return "É primo!";
+//   if (numero % 2 === 0 || numero % 3 === 0) return "Não é primo...";
+
+//   for (let i = 5; i * i <= numero; i += 6) {
+//     if (numero % i === 0 || numero % (i + 2) === 0) return "Não é primo...";
+//   }
+
+//   return "É primo!";
+// }
+
+// window.alert(eOuNaoEPrimo(parseInt(window.prompt("Digite um número: "))));
+
+// =-=-=-=-=-=-=-=-=-= Exercício 17 =-=-=-=-=-=-=-=-=-=
+
+// function verificarFatorial(numero) {
+//   if (numero > 7 || numero <= 0) {
+//     return "O fatorial deste número não pôde ser calculado...";
+//   } else {
+//     let numeros = [];
+//     for (let i = numero; i >= 1; i--) {
+//       numeros.push(i);
+//     }
+//     return numeros.reduce((valorTotal, valorAtual) => valorTotal * valorAtual);
+//   }
+// }
+
+// window.alert(verificarFatorial(parseInt(window.prompt("Digite um número: "))));
+
+// =-=-=-=-=-=-=-=-=-= Exercício 18 =-=-=-=-=-=-=-=-=-=
+
+function calcularIMC(peso, altura) {
+  let imc = peso / (altura * altura);
+  return imc <= 18.5
+    ? "Você está em BAIXO PESO"
+    : 18.6 <= imc && imc <= 24.9
+    ? "Você está em PESO NORMAL"
+    : 25 <= imc && imc <= 29.9
+    ? "Você está em SOBREPESO"
+    : 30 <= imc
+    ? "Você está em OBESIDADE"
+    : null;
+}
+
+function calcularPesoIdeal(altura) {
+  return (18.5 * altura ** 2).toFixed(2);
+}
+
+let peso = window.prompt("Digite seu peso: ");
+let altura = window.prompt("Digite sua altura: ");
+let mensagem = calcularIMC(peso, altura);
+let pesoIdeal = calcularPesoIdeal(altura);
+
+window.alert(
+  `${mensagem}, de acordo com sua altura seu peso ideal seria de ${pesoIdeal}`
+);
