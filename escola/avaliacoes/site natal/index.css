@@ -1,0 +1,119 @@
+* {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  color: inherit;
+  font-family: "General Sans", sans-serif;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-indent: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+header {
+  width: 100vw;
+  height: 76px;
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+nav a {
+  color: white;
+  padding: 5px 0;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(200, 50, 50);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+  color: rgb(206, 87, 87);
+}
+nav a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  z-index: 1000;
+  padding: 5px 0;
+  background-color: green;
+}
+.slideshow-container {
+  width: 100vw;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.slideshow-container img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 20px;
+}
+.product-card {
+  width: 18%;
+  background-color: #f9f9f9;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.product-card p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.buy-btn {
+  background-color: #c1272d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buy-btn:hover {
+  background-color: #ff5733;
+  transition: 0.3s;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #c1272d;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
