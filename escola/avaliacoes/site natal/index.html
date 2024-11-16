@@ -4,75 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Loja Alegria do Natal</title>
-    <link rel="stylesheet" href="common.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,401,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <header>
-      <div class="logo"></div>
-      <div class="icons"></div>
+    <header id="initial">
+      <div class="logo">
+        <h1>Alegria do Natal</h1>
+        <img style="height: 70px; margin-left: 10px;" src="img/logo.png" alt="logo">
+      </div>
+      <div class="search-bar">
+          <input type="text" placeholder="Buscar produtos..." class="search-input">
+          <button type="submit" class="search-button">&#128269;</button>
+      </div>
     </header>
     <nav>
-      <a href="index.html">Início</a>
-      <a href="collection.html">Coleção</a>
-      <a href="contact.html">Contato</a>
+      <a href="#initial">Início</a>
+      <a href="#collection">Coleção</a>
+      <a href="#contact">Contato</a>
     </nav>
     <main>
       <div class="slideshow-container">
-        <div class="slide fade">
-          <img src="img/slide1.jpg" alt="Slide 1" />
+        <div class="buttons">
+          <button class="nextButton" onclick="changeSlide(1)">&#10095;</button>
+          <button class="previousButton" onclick="changeSlide(-1)">&#10094;</button>
         </div>
-        <div class="slide fade">
-          <img src="img/slide2.jpg" alt="Slide 2" />
-        </div>
-        <div class="slide fade">
-          <img src="img/slide3.jpg" alt="Slide 3" />
+        <div class="slides">
+          <div class="slide">
+            <img src="img/slide1.png" alt="Slide 1" />
+          </div>
+          <div class="slide">
+            <img src="img/slide2.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="img/slide3.png" alt="Slide 3" />
+          </div>
         </div>
       </div>
-      <section class="products">
+      <section id="collection" class="products">
         <div class="product-card">
           <img src="img/produto1.jpg" alt="Produto 1" />
-          <p>R$50,00</p>
+          <div class="info">
+            <h3>Árvore de Natal 100cm</h3>
+            <h4>R$ 70,00</h4>
+            <h2>R$ 59,99</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
           <img src="img/produto2.jpg" alt="Produto 2" />
-          <p>R$50,00</p>
+          <div class="info">
+            <h3>Decoração p/ Árvore</h3>
+            <h4>R$ 25,00</h4>
+            <h2>R$ 19,99</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
-          <img src="img/produto1.jpg" alt="Produto 1" />
-          <p>R$50,00</p>
+          <img src="img/produto3.jpg" alt="Produto 3" />
+          <div class="info">
+            <h3>Fantasia Papai Noel Masculina</h3>
+            <h4>R$ 100,00</h4>
+            <h2>R$ 70,99</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
-          <img src="img/produto2.jpg" alt="Produto 2" />
-          <p>R$50,00</p>
+          <img src="img/produto4.jpg" alt="Produto 4" />
+          <div class="info">
+            <h3>Caneca Tema Natalino</h3>
+            <h4>R$ 28,00</h4>
+            <h2>R$ 22,99</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
-          <img src="img/produto1.jpg" alt="Produto 1" />
-          <p>R$50,00</p>
+          <img src="img/produto5.jpg" alt="Produto 5" />
+          <div class="info">
+            <h3>Pelúcia Renas Natalinas</h3>
+            <h4>R$ 44,99</h4>
+            <h2>R$ 30,00</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
-          <img src="img/produto2.jpg" alt="Produto 2" />
-          <p>R$50,00</p>
+          <img src="img/produto6.png" alt="Produto 6" />
+          <div class="info">
+            <h3>Panetone Chocolate 400g</h3>
+            <h4>R$ 24,99</h4>
+            <h2>R$ 20,00</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
-          <img src="img/produto1.jpg" alt="Produto 1" />
-          <p>R$50,00</p>
+          <img src="img/produto7.png" alt="Produto 7" />
+          <div class="info">
+            <h3>Caderno Natalino</h3>
+            <h4>R$ 19,00</h4>
+            <h2>R$ 14,99</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
         <div class="product-card">
-          <img src="img/produto2.jpg" alt="Produto 2" />
-          <p>R$50,00</p>
+          <img src="img/produto8.png" alt="Produto 8" />
+          <div class="info">
+            <h3>Gorro Papai Noel</h3>
+            <h4>R$ 25,00</h4>
+            <h2>R$ 20,99</h2>
+          </div>
           <button class="buy-btn">Comprar</button>
         </div>
       </section>
-    <footer>
-      <p>&copy; Todos os direitos reservados Felipe de Matos Garcia</p>
+    <footer id="contact">
+      <div class="column1">
+        <div class="logo">
+          <h1>Alegria do Natal</h1>
+          <img style="height: 70px; margin-left: 10px;" src="img/logo.png" alt="logo">
+        </div>
+        <p>Olá! Nós somos a Alegria do Natal, uma loja focada em artigos natalinos que oferece apenas o melhor para suas festas. Fundados em 2024, nós planejamos crescer cada vez mais e tomar o mercado de vez, mostrando à todos o verdadeiro espírito natalino.</p>
+      </div>
+      <div class="column2">
+        <p>Email: alegrialojanatalina@contato.com</p>
+        <p>Telefone: (12)3456-7890</p>
+        <p>Endereço: Rua Localização, 999 - Jardim Local, Cidade</p>
+      </div>
     </footer>
     <script defer src="script.js"></script>
   </body>
